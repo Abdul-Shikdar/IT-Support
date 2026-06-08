@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 export default function Home() {
   const html = `<!DOCTYPE html>
 <html lang="en">
