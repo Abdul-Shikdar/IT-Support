@@ -5,261 +5,290 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Abdul's Tech Solutions — Computer Repair Willenhall & West Midlands</title>
 <meta name="description" content="Friendly, honest computer repair and IT support in Willenhall and the West Midlands. Call or WhatsApp Abdul: 07356 287590. No fix, no fee.">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --bg:#ffffff;
-  --surface:#f7f8fc;
-  --surface2:#eef1f8;
-  --border:#e2e6f0;
-  --border2:#c8cfe0;
-  --text:#0f1623;
-  --muted:#5a6478;
-  --accent:#1d4ed8;
-  --accent-light:#2563eb;
-  --accent-pale:#eff4ff;
-  --accent-glow:rgba(29,78,216,0.18);
-  --green:#059669;
-  --green-bg:#f0fdf7;
-  --green-border:#a7f3d0;
-  --yellow:#d97706;
-  --yellow-bg:#fffbeb;
-  --wa:#25d366;
-  --wa-dark:#128c4e;
-  --shadow:0 1px 3px rgba(15,22,35,0.08),0 4px 16px rgba(15,22,35,0.06);
-  --shadow-md:0 4px 12px rgba(15,22,35,0.1),0 12px 40px rgba(15,22,35,0.08);
+  --bg:#ffffff;--surface:#f7f8fc;--surface2:#eef1f8;
+  --border:#e2e6f0;--border2:#c8cfe0;
+  --text:#111827;--muted:#6b7280;
+  --accent:#2563eb;--accent-pale:#eff6ff;--accent-glow:rgba(37,99,235,0.2);
+  --green:#059669;--green-bg:#f0fdf7;--green-border:#a7f3d0;
+  --yellow:#d97706;--yellow-bg:#fffbeb;
+  --wa:#25d366;--wa-dark:#128c4e;
+  --shadow:0 1px 3px rgba(0,0,0,.07),0 4px 12px rgba(0,0,0,.05);
+  --shadow-md:0 4px 16px rgba(0,0,0,.1),0 12px 32px rgba(0,0,0,.07);
+  --max:1100px;
 }
 html{scroll-behavior:smooth}
-body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--text);font-size:16px;line-height:1.7;overflow-x:hidden}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);font-size:15px;line-height:1.65;overflow-x:hidden}
 
-/* ─── NAV ─── */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:1rem 3rem;background:rgba(255,255,255,0.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);box-shadow:0 1px 8px rgba(15,22,35,0.06)}
-.nav-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:1.05rem;color:var(--text);text-decoration:none;letter-spacing:-0.02em}
-.nav-brand span{color:var(--accent-light)}
-.nav-links{display:flex;gap:2rem;list-style:none}
-.nav-links a{font-size:.875rem;color:var(--muted);text-decoration:none;font-weight:500;transition:color .2s}
-.nav-links a:hover,.nav-links a.active{color:var(--accent-light)}
-.nav-cta{display:flex;align-items:center;gap:.75rem}
-.btn-primary{background:var(--accent-light);color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-size:.875rem;font-weight:600;padding:.6rem 1.3rem;border-radius:8px;text-decoration:none;transition:transform .15s,box-shadow .15s;white-space:nowrap}
-.btn-primary:hover{transform:translateY(-1px);box-shadow:0 4px 16px var(--accent-glow)}
-.btn-ghost{background:transparent;border:1.5px solid var(--border2);color:var(--text);font-family:'Plus Jakarta Sans',sans-serif;font-size:.875rem;font-weight:500;padding:.55rem 1.1rem;border-radius:8px;text-decoration:none;transition:border-color .2s,background .2s;white-space:nowrap}
-.btn-ghost:hover{border-color:var(--accent-light);background:var(--accent-pale)}
-.mobile-menu-btn{display:none;background:none;border:1.5px solid var(--border2);color:var(--text);font-size:1.1rem;padding:.4rem .65rem;border-radius:6px;cursor:pointer}
-.mobile-menu{display:none;position:fixed;top:65px;left:0;right:0;z-index:199;background:#fff;border-bottom:1px solid var(--border);box-shadow:var(--shadow-md);flex-direction:column;padding:1rem 1.5rem 1.5rem}
-.mobile-menu.open{display:flex}
-.mobile-menu a{font-size:1rem;color:var(--muted);text-decoration:none;padding:.75rem 0;border-bottom:1px solid var(--border);font-weight:500;transition:color .2s}
-.mobile-menu a:last-child{border-bottom:none}
-.mobile-menu a:hover{color:var(--accent-light)}
-.mobile-menu .mm-call{color:var(--accent-light);font-weight:600;border-bottom:1px solid var(--border)}
-.mobile-menu .mm-wa{color:var(--wa-dark);font-weight:600}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:.85rem 2.5rem;background:rgba(255,255,255,0.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);box-shadow:0 1px 6px rgba(0,0,0,.05)}
+.nav-brand{font-family:'Nunito',sans-serif;font-weight:800;font-size:1rem;color:var(--text);text-decoration:none;letter-spacing:0;white-space:nowrap}
+.nav-brand span{color:var(--accent)}
+.nav-links{display:flex;gap:1.75rem;list-style:none}
+.nav-links a{font-size:.82rem;color:var(--muted);text-decoration:none;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--accent)}
+.nav-cta{display:flex;align-items:center;gap:.6rem}
+.btn-call{background:var(--accent);color:#fff;font-size:.82rem;font-weight:600;padding:.5rem 1.1rem;border-radius:7px;text-decoration:none;white-space:nowrap;transition:transform .15s,box-shadow .15s}
+.btn-call:hover{transform:translateY(-1px);box-shadow:0 4px 14px var(--accent-glow)}
+.btn-ghost{background:transparent;border:1.5px solid var(--border2);color:var(--text);font-size:.82rem;font-weight:500;padding:.45rem 1rem;border-radius:7px;text-decoration:none;white-space:nowrap;transition:border-color .2s}
+.btn-ghost:hover{border-color:var(--accent)}
+.mob-btn{display:none;background:none;border:1.5px solid var(--border2);color:var(--text);font-size:1.1rem;padding:.35rem .6rem;border-radius:6px;cursor:pointer}
+.mob-menu{display:none;position:fixed;top:62px;left:0;right:0;z-index:199;background:#fff;border-bottom:1px solid var(--border);box-shadow:var(--shadow-md);flex-direction:column;padding:.75rem 1.5rem 1.25rem}
+.mob-menu.open{display:flex}
+.mob-menu a{font-size:.95rem;color:var(--muted);text-decoration:none;padding:.65rem 0;border-bottom:1px solid var(--border);font-weight:500}
+.mob-menu a:last-child{border-bottom:none}
+.mob-menu a:hover{color:var(--accent)}
+.mob-call{color:var(--accent)!important;font-weight:600!important}
+.mob-wa{color:var(--wa-dark)!important;font-weight:600!important}
 
-/* ─── PAGES ─── */
-.page{display:none}
-.page.active{display:block}
+/* PAGE SWITCH */
+.page{display:none}.page.active{display:block}
 
-/* ─── HERO ─── */
-.hero{min-height:100vh;display:flex;align-items:center;padding:8rem 3rem 5rem;background:var(--bg);position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;top:0;right:0;width:55%;height:100%;background:var(--accent-pale);clip-path:polygon(12% 0,100% 0,100% 100%,0 100%);z-index:0}
-.hero-inner{max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;position:relative;z-index:1}
-.hero-left{}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:.5rem;background:var(--green-bg);border:1px solid var(--green-border);color:var(--green);font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:.35rem .9rem;border-radius:99px;margin-bottom:1.5rem}
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;padding:7rem 2.5rem 4rem;background:var(--bg);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:0;right:0;width:52%;height:100%;background:var(--accent-pale);clip-path:polygon(10% 0,100% 0,100% 100%,0 100%);z-index:0}
+.hero-inner{max-width:var(--max);margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center;position:relative;z-index:1}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:.45rem;background:var(--green-bg);border:1px solid var(--green-border);color:var(--green);font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .85rem;border-radius:99px;margin-bottom:1.25rem}
 .hero-eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--green);flex-shrink:0;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
-.hero h1{font-family:'Syne',sans-serif;font-size:clamp(2.4rem,4.5vw,3.8rem);font-weight:800;line-height:1.08;letter-spacing:-.03em;color:var(--text);margin-bottom:1.25rem}
-.hero h1 .blue{color:var(--accent-light)}
-.hero-sub{font-size:1.05rem;color:var(--muted);max-width:480px;margin-bottom:2rem;font-weight:400;line-height:1.8}
-.hero-ctas{display:flex;gap:.85rem;flex-wrap:wrap;margin-bottom:2.5rem}
-.cta-main{display:inline-flex;align-items:center;gap:.6rem;background:var(--accent-light);color:#fff;font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;padding:.9rem 2rem;border-radius:10px;text-decoration:none;transition:transform .2s,box-shadow .2s}
-.cta-main:hover{transform:translateY(-2px);box-shadow:0 8px 28px var(--accent-glow)}
-.cta-wa{display:inline-flex;align-items:center;gap:.6rem;background:var(--wa);color:#fff;font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;padding:.9rem 2rem;border-radius:10px;text-decoration:none;transition:transform .2s,box-shadow .2s}
-.cta-wa:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(37,211,102,.3)}
-.cta-outline{display:inline-flex;align-items:center;gap:.6rem;background:transparent;border:2px solid var(--border2);color:var(--text);font-weight:600;font-size:.95rem;padding:.85rem 1.75rem;border-radius:10px;text-decoration:none;transition:border-color .2s,background .2s}
-.cta-outline:hover{border-color:var(--accent-light);background:var(--accent-pale)}
-.hero-trust{display:flex;flex-wrap:wrap;gap:1rem}
-.trust-pill{display:flex;align-items:center;gap:.4rem;font-size:.82rem;color:var(--muted);font-weight:500}
-.trust-pill span{color:var(--text)}
+.hero h1{font-family:'Nunito',sans-serif;font-size:clamp(2.2rem,4vw,3.4rem);font-weight:800;line-height:1.1;letter-spacing:-.01em;color:var(--text);margin-bottom:1rem}
+.hero h1 .blue{color:var(--accent)}
+.hero-sub{font-size:.95rem;color:var(--muted);max-width:440px;margin-bottom:1.75rem;line-height:1.7}
+.hero-ctas{display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:2rem}
+.cta-main{display:inline-flex;align-items:center;gap:.5rem;background:var(--accent);color:#fff;font-family:'Nunito',sans-serif;font-weight:700;font-size:.95rem;padding:.8rem 1.75rem;border-radius:9px;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.cta-main:hover{transform:translateY(-2px);box-shadow:0 8px 24px var(--accent-glow)}
+.cta-wa{display:inline-flex;align-items:center;gap:.5rem;background:var(--wa);color:#fff;font-family:'Nunito',sans-serif;font-weight:700;font-size:.95rem;padding:.8rem 1.75rem;border-radius:9px;text-decoration:none;transition:transform .2s}
+.cta-wa:hover{transform:translateY(-2px)}
+.cta-sec{display:inline-flex;align-items:center;gap:.5rem;background:transparent;border:2px solid var(--border2);color:var(--text);font-weight:600;font-size:.9rem;padding:.75rem 1.5rem;border-radius:9px;text-decoration:none;transition:border-color .2s}
+.cta-sec:hover{border-color:var(--accent)}
+.trust-row{display:flex;flex-wrap:wrap;gap:.85rem}
+.trust-pill{display:flex;align-items:center;gap:.35rem;font-size:.78rem;color:var(--muted);font-weight:500}
 
-/* ─── HERO RIGHT / AVATAR ─── */
-.hero-right{display:flex;flex-direction:column;align-items:center;gap:1.5rem}
-.avatar-wrap{position:relative;width:320px;height:320px}
-.avatar-bg-circle{position:absolute;inset:0;border-radius:50%;background:white;box-shadow:var(--shadow-md)}
-.avatar-svg{width:100%;height:100%;border-radius:50%;overflow:hidden;object-fit:cover}
-.speech-bubble{position:absolute;top:-20px;right:-30px;background:#fff;border:1.5px solid var(--border);border-radius:16px 16px 16px 4px;padding:.75rem 1rem;box-shadow:var(--shadow);max-width:180px}
-.speech-bubble p{font-size:.8rem;color:var(--text);font-weight:500;line-height:1.4}
-.speech-bubble::after{content:'';position:absolute;bottom:-10px;left:16px;width:16px;height:10px;background:#fff;clip-path:polygon(0 0,100% 0,50% 100%)}
-.hero-quick-contact{width:100%;max-width:320px;background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:1.25rem;box-shadow:var(--shadow)}
-.hqc-title{font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.85rem}
-.hqc-row{display:flex;align-items:center;gap:.75rem;padding:.6rem 0;border-bottom:1px solid var(--border)}
-.hqc-row:last-child{border-bottom:none;padding-bottom:0}
-.hqc-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
-.hqc-label{font-size:.7rem;color:var(--muted)}
-.hqc-val{font-size:.9rem;font-weight:600;color:var(--text);text-decoration:none}
-.hqc-val:hover{color:var(--accent-light)}
+/* HERO RIGHT */
+.hero-right{display:flex;flex-direction:column;align-items:center;gap:1.25rem}
+.avatar-wrap{position:relative;width:290px;height:290px}
+.avatar-bg{position:absolute;inset:0;border-radius:50%;background:#fff;box-shadow:var(--shadow-md)}
+.avatar-svg{width:100%;height:100%;border-radius:50%;overflow:hidden;display:block}
+.speech{position:absolute;top:-18px;right:-28px;background:#fff;border:1.5px solid var(--border);border-radius:14px 14px 14px 4px;padding:.65rem .9rem;box-shadow:var(--shadow);max-width:168px}
+.speech p{font-size:.75rem;color:var(--text);font-weight:500;line-height:1.4}
+.qc-box{width:100%;max-width:290px;background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:1.1rem;box-shadow:var(--shadow)}
+.qc-title{font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:.75rem}
+.qc-row{display:flex;align-items:center;gap:.7rem;padding:.5rem 0;border-bottom:1px solid var(--border)}
+.qc-row:last-child{border-bottom:none;padding-bottom:0}
+.qc-icon{width:34px;height:34px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.qc-lbl{font-size:.68rem;color:var(--muted)}
+.qc-val{font-size:.88rem;font-weight:600;color:var(--text);text-decoration:none}
+.qc-val:hover{color:var(--accent)}
 
-/* ─── SERVICE PAGES (home repair / business) ─── */
-.service-page-hero{padding:7rem 3rem 4rem;background:var(--surface);border-bottom:1px solid var(--border)}
-.service-page-inner{max-width:1100px;margin:0 auto}
-.back-btn{display:inline-flex;align-items:center;gap:.5rem;color:var(--muted);font-size:.875rem;font-weight:500;text-decoration:none;margin-bottom:1.5rem;transition:color .2s}
-.back-btn:hover{color:var(--accent-light)}
-.page-badge{display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:.35rem .9rem;border-radius:99px;margin-bottom:1rem}
-.page-badge.home-badge{background:var(--accent-pale);color:var(--accent-light);border:1px solid #bfdbfe}
-.page-badge.biz-badge{background:var(--yellow-bg);color:var(--yellow);border:1px solid #fde68a}
-.page-hero-title{font-family:'Syne',sans-serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:800;letter-spacing:-.03em;margin-bottom:.75rem}
-.page-hero-sub{font-size:1.05rem;color:var(--muted);max-width:560px;margin-bottom:2rem}
-.page-ctas{display:flex;gap:.85rem;flex-wrap:wrap}
+/* SERVICE SLIDER */
+.slider-section{padding:3.5rem 2.5rem;background:#fff;border-bottom:1px solid var(--border)}
+.slider-inner{max-width:var(--max);margin:0 auto}
+.slider-label{font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.5rem}
+.slider-title{font-family:'Nunito',sans-serif;font-size:clamp(1.5rem,2.5vw,2rem);font-weight:800;letter-spacing:0;margin-bottom:1.75rem}
+.slider-wrap{position:relative}
+.slider-track{display:flex;gap:1rem;overflow:hidden;scroll-behavior:smooth}
+.slide{flex:0 0 calc(33.33% - .67rem);background:var(--surface);border:1.5px solid var(--border);border-radius:14px;padding:1.5rem;cursor:pointer;transition:border-color .2s,box-shadow .2s,transform .2s}
+.slide:hover{border-color:var(--accent);box-shadow:var(--shadow-md);transform:translateY(-2px)}
+.slide-icon{font-size:1.8rem;margin-bottom:.75rem;display:block}
+.slide-title{font-family:'Nunito',sans-serif;font-weight:700;font-size:.95rem;margin-bottom:.4rem}
+.slide-desc{font-size:.82rem;color:var(--muted);line-height:1.6}
+.slide-btn{display:inline-flex;align-items:center;gap:.3rem;margin-top:.85rem;font-size:.78rem;font-weight:600;color:var(--accent);text-decoration:none}
+.slider-nav{display:flex;gap:.5rem;margin-top:1.25rem}
+.snav-btn{width:36px;height:36px;border-radius:50%;border:1.5px solid var(--border2);background:#fff;cursor:pointer;font-size:.9rem;display:flex;align-items:center;justify-content:center;transition:border-color .2s,background .2s}
+.snav-btn:hover{border-color:var(--accent);background:var(--accent-pale)}
+.sdots{display:flex;align-items:center;gap:.4rem;margin-left:.5rem}
+.sdot{width:7px;height:7px;border-radius:50%;background:var(--border2);transition:background .2s}
+.sdot.active{background:var(--accent)}
 
-/* ─── SERVICE DETAIL GRID ─── */
-.service-detail{padding:5rem 3rem;background:var(--bg)}
-.sd-inner{max-width:1100px;margin:0 auto}
-.sd-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;margin-top:2.5rem}
-.sd-card{background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:1.75rem;box-shadow:var(--shadow);transition:box-shadow .2s,transform .2s,border-color .2s}
-.sd-card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px);border-color:var(--accent-light)}
-.sd-card-icon{font-size:1.8rem;margin-bottom:.85rem;display:block}
-.sd-card-title{font-family:'Syne',sans-serif;font-weight:700;font-size:1.05rem;margin-bottom:.5rem;color:var(--text)}
-.sd-card-desc{font-size:.875rem;color:var(--muted);line-height:1.65}
-.sd-card-list{list-style:none;margin-top:.85rem;display:flex;flex-direction:column;gap:.4rem}
-.sd-card-list li{font-size:.85rem;color:var(--text);display:flex;align-items:flex-start;gap:.5rem}
-.sd-card-list li::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0}
-.pricing-note{margin-top:3rem;background:var(--accent-pale);border:1.5px solid #bfdbfe;border-radius:14px;padding:1.5rem 2rem;display:flex;align-items:flex-start;gap:1rem}
-.pricing-note-icon{font-size:1.5rem;flex-shrink:0}
-.pricing-note-text h4{font-weight:600;font-size:1rem;margin-bottom:.35rem;color:var(--accent-light)}
-.pricing-note-text p{font-size:.875rem;color:var(--muted)}
+/* STICKY CTA BANNER */
+.cta-banner{background:var(--accent);padding:1.1rem 2.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.cta-banner p{color:#fff;font-size:.92rem;font-weight:500}
+.cta-banner p strong{font-weight:700}
+.cta-banner-btns{display:flex;gap:.75rem;flex-wrap:wrap}
+.cta-banner-btns a{display:inline-flex;align-items:center;gap:.4rem;font-size:.85rem;font-weight:600;padding:.55rem 1.25rem;border-radius:7px;text-decoration:none;white-space:nowrap;transition:transform .15s}
+.cta-banner-btns a:hover{transform:translateY(-1px)}
+.cta-b-call{background:#fff;color:var(--accent)}
+.cta-b-wa{background:var(--wa);color:#fff}
+.cta-b-form{background:transparent;border:1.5px solid rgba(255,255,255,.5);color:#fff}
 
-/* ─── ABOUT STRIP ─── */
-.about-strip{background:var(--text);color:#fff;padding:5rem 3rem}
-.about-strip-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:auto 1fr;gap:4rem;align-items:center}
-.about-avatar-small{width:140px;height:140px;border-radius:20px;overflow:hidden;flex-shrink:0;border:3px solid rgba(255,255,255,.15)}
-.about-avatar-small svg{width:100%;height:100%}
-.about-text h2{font-family:'Syne',sans-serif;font-size:1.8rem;font-weight:800;margin-bottom:.75rem;letter-spacing:-.02em}
-.about-text p{font-size:.95rem;color:rgba(255,255,255,.7);max-width:600px;line-height:1.75}
-.about-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.25rem}
-.about-chip{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.85);font-size:.78rem;font-weight:500;padding:.3rem .75rem;border-radius:99px}
+/* SERVICES OVERVIEW */
+.services-overview{padding:4rem 2.5rem;background:var(--surface)}
+.so-inner{max-width:var(--max);margin:0 auto}
+.sec-label{font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.4rem}
+.sec-title{font-family:'Nunito',sans-serif;font-size:clamp(1.5rem,2.5vw,2rem);font-weight:800;letter-spacing:0;margin-bottom:.5rem}
+.sec-sub{font-size:.9rem;color:var(--muted);margin-bottom:2rem;max-width:520px}
+.so-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.1rem}
+.so-card{background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:1.75rem;cursor:pointer;transition:border-color .2s,box-shadow .2s,transform .2s}
+.so-card:hover{border-color:var(--accent);box-shadow:var(--shadow-md);transform:translateY(-3px)}
+.so-icon{font-size:2rem;margin-bottom:.85rem;display:block}
+.so-name{font-family:'Nunito',sans-serif;font-weight:800;font-size:1.05rem;margin-bottom:.4rem}
+.so-desc{font-size:.82rem;color:var(--muted);line-height:1.6;margin-bottom:1rem}
+.so-list{list-style:none;display:flex;flex-direction:column;gap:.3rem;margin-bottom:1.1rem}
+.so-list li{font-size:.8rem;color:var(--text);display:flex;gap:.4rem}
+.so-list li::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0}
+.so-link{display:inline-flex;align-items:center;gap:.35rem;font-size:.8rem;font-weight:700;color:#fff;padding:.5rem 1.1rem;border-radius:7px;text-decoration:none}
 
-/* ─── HOW IT WORKS ─── */
-.how{padding:5rem 3rem;background:var(--surface)}
-.how-inner{max-width:1100px;margin:0 auto}
-.how-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;margin-top:2.5rem;position:relative}
-.how-step{text-align:center;padding:1.5rem}
-.step-num{width:48px;height:48px;border-radius:50%;background:var(--accent-pale);border:2px solid var(--accent-light);color:var(--accent-light);font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem}
-.step-title{font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;margin-bottom:.5rem}
-.step-desc{font-size:.875rem;color:var(--muted);line-height:1.6}
+/* ABOUT */
+.about{background:var(--text);color:#fff;padding:4rem 2.5rem}
+.about-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:center}
+.about-av{width:130px;height:130px;border-radius:18px;overflow:hidden;border:3px solid rgba(255,255,255,.15);flex-shrink:0}
+.about-av svg{width:100%;height:100%}
+.about-text h2{font-family:'Nunito',sans-serif;font-size:1.6rem;font-weight:800;margin-bottom:.65rem;letter-spacing:0}
+.about-text p{font-size:.88rem;color:rgba(255,255,255,.7);max-width:560px;line-height:1.72}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem}
+.chip{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.85);font-size:.75rem;font-weight:500;padding:.25rem .7rem;border-radius:99px}
 
-/* ─── AREAS ─── */
-.areas{padding:3rem 3rem;background:#fff;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.areas-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}
-.areas-label{font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
-.areas-tags{display:flex;flex-wrap:wrap;gap:.5rem}
-.area-tag{background:var(--surface);border:1.5px solid var(--border);color:var(--text);font-size:.8rem;font-weight:500;padding:.3rem .8rem;border-radius:99px;transition:border-color .2s,background .2s}
-.area-tag:hover{border-color:var(--accent-light);background:var(--accent-pale)}
+/* HOW */
+.how{padding:4rem 2.5rem;background:var(--surface)}
+.how-inner{max-width:var(--max);margin:0 auto}
+.how-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1.5rem;margin-top:2rem}
+.how-step{background:#fff;border:1.5px solid var(--border);border-radius:13px;padding:1.35rem;text-align:center;box-shadow:var(--shadow)}
+.step-n{width:44px;height:44px;border-radius:50%;background:var(--accent-pale);border:2px solid var(--accent);color:var(--accent);font-family:'Nunito',sans-serif;font-weight:800;font-size:1rem;display:flex;align-items:center;justify-content:center;margin:0 auto .85rem}
+.step-t{font-family:'Nunito',sans-serif;font-weight:700;font-size:.9rem;margin-bottom:.35rem}
+.step-d{font-size:.8rem;color:var(--muted);line-height:1.55}
 
-/* ─── REVIEWS ─── */
-.reviews{padding:5rem 3rem;background:var(--surface)}
-.reviews-inner{max-width:1100px;margin:0 auto}
-.bark-bar{display:flex;align-items:center;gap:0;background:#fff;border:1.5px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:2.5rem;box-shadow:var(--shadow);flex-wrap:wrap}
-.bark-stat{flex:1;min-width:100px;padding:1.1rem 1rem;text-align:center;border-right:1px solid var(--border)}
-.bark-stat:last-of-type{border-right:none}
-.bsn{display:block;font-family:'Syne',sans-serif;font-weight:800;font-size:1.3rem;color:var(--yellow)}
-.bsl{display:block;font-size:.7rem;color:var(--muted);letter-spacing:.03em;margin-top:.1rem}
-.bark-link-btn{display:flex;align-items:center;justify-content:center;padding:1rem 1.5rem;background:var(--accent-light);color:#fff;text-decoration:none;font-weight:600;font-size:.85rem;white-space:nowrap;transition:background .2s}
-.bark-link-btn:hover{background:#1d4ed8}
-.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.25rem}
-.review-card{background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:1.5rem;box-shadow:var(--shadow);transition:box-shadow .2s,border-color .2s}
-.review-card:hover{box-shadow:var(--shadow-md);border-color:var(--border2)}
-.review-stars{color:var(--yellow);font-size:.9rem;margin-bottom:.6rem}
-.review-title{font-weight:600;font-size:.95rem;margin-bottom:.5rem;color:var(--text)}
-.review-body{font-size:.875rem;color:var(--muted);line-height:1.65;margin-bottom:.75rem}
-.review-author{font-size:.78rem;color:var(--accent-light);font-weight:600}
+/* AREAS */
+.areas{padding:2rem 2.5rem;background:#fff;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.areas-inner{max-width:var(--max);margin:0 auto;display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap}
+.areas-lbl{font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.areas-tags{display:flex;flex-wrap:wrap;gap:.45rem}
+.area-tag{background:var(--surface);border:1.5px solid var(--border);color:var(--text);font-size:.76rem;font-weight:500;padding:.25rem .7rem;border-radius:99px;transition:border-color .2s}
+.area-tag:hover{border-color:var(--accent)}
 
-/* ─── FAQ ─── */
-.faq{padding:5rem 3rem;background:#fff}
-.faq-inner{max-width:780px;margin:0 auto}
-.section-label{font-size:.7rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--accent-light);margin-bottom:.6rem}
-.section-heading{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:800;letter-spacing:-.03em;line-height:1.1;margin-bottom:.6rem;color:var(--text)}
-.section-sub{font-size:1rem;color:var(--muted);margin-bottom:2.5rem;font-weight:400}
-.faq-list{display:flex;flex-direction:column;gap:0;border:1.5px solid var(--border);border-radius:14px;overflow:hidden}
+/* REVIEWS */
+.reviews{padding:4rem 2.5rem;background:var(--surface)}
+.rev-inner{max-width:var(--max);margin:0 auto}
+.bark-bar{display:flex;background:#fff;border:1.5px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:2rem;box-shadow:var(--shadow);flex-wrap:wrap}
+.bstat{flex:1;min-width:90px;padding:.9rem 1rem;text-align:center;border-right:1px solid var(--border)}
+.bstat:last-of-type{border-right:none}
+.bsn{display:block;font-family:'Nunito',sans-serif;font-weight:800;font-size:1.2rem;color:var(--yellow)}
+.bsl{display:block;font-size:.68rem;color:var(--muted);margin-top:.1rem}
+.bark-btn{display:flex;align-items:center;justify-content:center;padding:.9rem 1.25rem;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;font-size:.8rem;white-space:nowrap;transition:background .2s}
+.bark-btn:hover{background:#1d4ed8}
+.rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1.1rem}
+.rev-card{background:#fff;border:1.5px solid var(--border);border-radius:12px;padding:1.35rem;box-shadow:var(--shadow);transition:box-shadow .2s}
+.rev-card:hover{box-shadow:var(--shadow-md)}
+.rev-stars{color:var(--yellow);font-size:.85rem;margin-bottom:.5rem}
+.rev-title{font-weight:600;font-size:.88rem;margin-bottom:.4rem}
+.rev-body{font-size:.82rem;color:var(--muted);line-height:1.62;margin-bottom:.65rem}
+.rev-author{font-size:.74rem;color:var(--accent);font-weight:600}
+
+/* FAQ */
+.faq{padding:4rem 2.5rem;background:#fff}
+.faq-inner{max-width:720px;margin:0 auto}
+.faq-list{border:1.5px solid var(--border);border-radius:12px;overflow:hidden;margin-top:2rem}
 .faq-item{background:#fff;border-bottom:1px solid var(--border)}
 .faq-item:last-child{border-bottom:none}
-.faq-q{width:100%;background:none;border:none;color:var(--text);font-family:'Plus Jakarta Sans',sans-serif;font-size:.95rem;font-weight:600;text-align:left;padding:1.2rem 1.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;transition:background .2s}
+.faq-q{width:100%;background:none;border:none;color:var(--text);font-family:'Inter',sans-serif;font-size:.88rem;font-weight:600;text-align:left;padding:1.1rem 1.35rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;transition:background .2s}
 .faq-q:hover{background:var(--surface)}
-.faq-q .arr{font-size:.75rem;color:var(--muted);transition:transform .3s;flex-shrink:0}
+.faq-q .arr{font-size:.7rem;color:var(--muted);transition:transform .3s;flex-shrink:0}
 .faq-q.open .arr{transform:rotate(180deg)}
-.faq-a{font-size:.875rem;color:var(--muted);line-height:1.75;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .2s}
-.faq-a.open{max-height:300px;padding:0 1.5rem 1.2rem}
+.faq-a{font-size:.82rem;color:var(--muted);line-height:1.72;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .2s}
+.faq-a.open{max-height:300px;padding:0 1.35rem 1.1rem}
 
-/* ─── CONTACT ─── */
-.contact{padding:5rem 3rem;background:var(--surface)}
-.contact-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem}
-.contact-left{}
-.contact-ways{display:flex;flex-direction:column;gap:.75rem;margin-top:1.5rem}
-.cw-row{display:flex;align-items:center;gap:.9rem;background:#fff;border:1.5px solid var(--border);border-radius:12px;padding:1rem 1.25rem;text-decoration:none;transition:border-color .2s,box-shadow .2s;box-shadow:var(--shadow)}
-.cw-row:hover{border-color:var(--accent-light);box-shadow:var(--shadow-md)}
-.cw-icon{width:40px;height:40px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
-.cw-lbl{font-size:.72rem;color:var(--muted);font-weight:500}
-.cw-val{font-weight:600;color:var(--text);font-size:.95rem}
-.form-card{background:#fff;border:1.5px solid var(--border);border-radius:18px;padding:2rem;box-shadow:var(--shadow)}
-.form-card h3{font-family:'Syne',sans-serif;font-weight:800;font-size:1.2rem;margin-bottom:.25rem;color:var(--text)}
-.form-card p{font-size:.85rem;color:var(--muted);margin-bottom:1.5rem}
-.field{margin-bottom:1rem}
-.field label{display:block;font-size:.75rem;font-weight:600;color:var(--muted);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.4rem}
-.field input,.field textarea,.field select{width:100%;background:var(--surface);border:1.5px solid var(--border);border-radius:9px;padding:.7rem 1rem;color:var(--text);font-family:'Plus Jakarta Sans',sans-serif;font-size:.9rem;outline:none;transition:border-color .2s,box-shadow .2s}
-.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--accent-light);box-shadow:0 0 0 3px rgba(37,99,235,.12);background:#fff}
-.field textarea{resize:vertical;min-height:100px;line-height:1.6}
-.submit-btn{width:100%;background:var(--accent-light);color:#fff;font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;padding:.9rem;border:none;border-radius:9px;cursor:pointer;transition:transform .15s,box-shadow .15s}
-.submit-btn:hover{transform:translateY(-1px);box-shadow:0 6px 20px var(--accent-glow)}
-.form-success{display:none;text-align:center;padding:2rem}
-.form-success .tick{font-size:2.5rem;margin-bottom:1rem}
-.form-success h4{font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;margin-bottom:.5rem}
-.form-success p{font-size:.875rem;color:var(--muted)}
+/* CONTACT */
+.contact{padding:4rem 2.5rem;background:var(--surface)}
+.contact-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3.5rem}
+.cways{display:flex;flex-direction:column;gap:.65rem;margin-top:1.25rem}
+.cw{display:flex;align-items:center;gap:.8rem;background:#fff;border:1.5px solid var(--border);border-radius:11px;padding:.875rem 1.1rem;text-decoration:none;transition:border-color .2s,box-shadow .2s;box-shadow:var(--shadow)}
+.cw:hover{border-color:var(--accent);box-shadow:var(--shadow-md)}
+.cw-ic{width:36px;height:36px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0}
+.cw-lb{font-size:.68rem;color:var(--muted);font-weight:500}
+.cw-vl{font-weight:600;color:var(--text);font-size:.88rem}
+.form-card{background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:1.75rem;box-shadow:var(--shadow)}
+.form-card h3{font-family:'Nunito',sans-serif;font-weight:800;font-size:1.1rem;margin-bottom:.25rem}
+.form-card p{font-size:.8rem;color:var(--muted);margin-bottom:1.35rem}
+.field{margin-bottom:.9rem}
+.field label{display:block;font-size:.7rem;font-weight:600;color:var(--muted);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.35rem}
+.field input,.field textarea,.field select{width:100%;background:var(--surface);border:1.5px solid var(--border);border-radius:8px;padding:.62rem .9rem;color:var(--text);font-family:'Inter',sans-serif;font-size:.85rem;outline:none;transition:border-color .2s,box-shadow .2s}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(37,99,235,.1);background:#fff}
+.field textarea{resize:vertical;min-height:90px;line-height:1.6}
+.sub-btn{width:100%;background:var(--accent);color:#fff;font-family:'Nunito',sans-serif;font-weight:700;font-size:.95rem;padding:.85rem;border:none;border-radius:8px;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.sub-btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px var(--accent-glow)}
+.form-note{font-size:.72rem;color:var(--muted);text-align:center;margin-top:.6rem}
+.form-success{display:none;text-align:center;padding:1.75rem}
+.form-success .tick{font-size:2.2rem;margin-bottom:.75rem}
+.form-success h4{font-family:'Nunito',sans-serif;font-weight:800;font-size:1rem;margin-bottom:.4rem}
+.form-success p{font-size:.82rem;color:var(--muted)}
 
-/* ─── MAP ─── */
-.map-section{padding:0;background:#fff}
-.map-section iframe{display:block;width:100%;height:400px;border:none;filter:grayscale(20%)}
+/* MAP */
+.map-section iframe{display:block;width:100%;height:360px;border:none;filter:grayscale(15%)}
 
-/* ─── FOOTER ─── */
-footer{background:var(--text);color:rgba(255,255,255,.7);padding:3rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem}
-.footer-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:1rem;color:#fff}
+/* SERVICE PAGES */
+.sp-hero{padding:6.5rem 2.5rem 3.5rem;background:var(--surface);border-bottom:1px solid var(--border)}
+.sp-inner{max-width:var(--max);margin:0 auto}
+.back-btn{display:inline-flex;align-items:center;gap:.4rem;color:var(--muted);font-size:.82rem;font-weight:500;text-decoration:none;margin-bottom:1.25rem;transition:color .2s}
+.back-btn:hover{color:var(--accent)}
+.sp-badge{display:inline-flex;align-items:center;gap:.4rem;font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .85rem;border-radius:99px;margin-bottom:.85rem}
+.sp-title{font-family:'Nunito',sans-serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;letter-spacing:-.01em;margin-bottom:.65rem}
+.sp-sub{font-size:.95rem;color:var(--muted);max-width:520px;margin-bottom:1.75rem}
+.sp-ctas{display:flex;gap:.75rem;flex-wrap:wrap}
+.sd{padding:4rem 2.5rem;background:#fff}
+.sd-inner{max-width:var(--max);margin:0 auto}
+.sd-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.1rem;margin-top:2rem}
+.sd-card{background:var(--surface);border:1.5px solid var(--border);border-radius:14px;padding:1.5rem;box-shadow:var(--shadow);transition:box-shadow .2s,transform .2s,border-color .2s}
+.sd-card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px);border-color:var(--accent)}
+.sd-card-icon{font-size:1.6rem;margin-bottom:.75rem;display:block}
+.sd-card-title{font-family:'Nunito',sans-serif;font-weight:700;font-size:.95rem;margin-bottom:.4rem}
+.sd-card-desc{font-size:.82rem;color:var(--muted);line-height:1.6}
+.sd-card-list{list-style:none;margin-top:.75rem;display:flex;flex-direction:column;gap:.35rem}
+.sd-card-list li{font-size:.8rem;color:var(--text);display:flex;align-items:flex-start;gap:.4rem}
+.sd-card-list li::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0}
+.pnote{margin-top:2.5rem;border:1.5px solid #bfdbfe;border-radius:12px;padding:1.35rem 1.75rem;display:flex;align-items:flex-start;gap:.9rem;background:var(--accent-pale)}
+.pnote-icon{font-size:1.35rem;flex-shrink:0}
+.pnote-text h4{font-weight:600;font-size:.9rem;margin-bottom:.3rem;color:var(--accent)}
+.pnote-text p{font-size:.82rem;color:var(--muted)}
+.sp-cta-bar{padding:2.5rem;text-align:center}
+.sp-cta-bar h2{font-family:'Nunito',sans-serif;font-weight:800;font-size:1.6rem;color:#fff;margin-bottom:.65rem}
+.sp-cta-bar p{color:rgba(255,255,255,.85);font-size:.9rem;margin-bottom:1.35rem}
+.sp-cta-bar-btns{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap}
+.sp-cta-bar-btns a{display:inline-flex;align-items:center;gap:.5rem;font-family:'Nunito',sans-serif;font-weight:700;font-size:.9rem;padding:.8rem 1.75rem;border-radius:9px;text-decoration:none;transition:transform .15s}
+.sp-cta-bar-btns a:hover{transform:translateY(-1px)}
+
+/* FOOTER */
+footer{background:var(--text);color:rgba(255,255,255,.65);padding:2.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.25rem}
+.footer-brand{font-family:'Nunito',sans-serif;font-weight:800;font-size:.95rem;color:#fff}
 .footer-brand span{color:#60a5fa}
-.footer-links{display:flex;gap:1.5rem;flex-wrap:wrap}
-.footer-links a{font-size:.85rem;color:rgba(255,255,255,.6);text-decoration:none;transition:color .2s}
+.footer-links{display:flex;gap:1.25rem;flex-wrap:wrap}
+.footer-links a{font-size:.8rem;color:rgba(255,255,255,.55);text-decoration:none;transition:color .2s}
 .footer-links a:hover{color:#fff}
-.footer-right{font-size:.85rem}
+.footer-right{font-size:.8rem}
 .footer-right a{color:#60a5fa;text-decoration:none}
 
-/* ─── WHATSAPP FLOAT ─── */
-.wa-float{position:fixed;bottom:1.75rem;right:1.75rem;z-index:300;background:var(--wa);color:#fff;font-family:'Syne',sans-serif;font-weight:700;font-size:.9rem;padding:.85rem 1.4rem;border-radius:99px;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,.4);display:flex;align-items:center;gap:.5rem;animation:slideUp .5s ease .4s both;transition:transform .2s,box-shadow .2s}
-.wa-float:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(37,211,102,.5)}
+/* WA FLOAT */
+.wa-float{position:fixed;bottom:1.5rem;right:1.5rem;z-index:300;background:var(--wa);color:#fff;font-family:'Nunito',sans-serif;font-weight:700;font-size:.85rem;padding:.75rem 1.25rem;border-radius:99px;text-decoration:none;box-shadow:0 4px 18px rgba(37,211,102,.4);display:flex;align-items:center;gap:.45rem;animation:slideUp .5s ease .4s both;transition:transform .2s}
+.wa-float:hover{transform:translateY(-2px)}
 @keyframes slideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-.wa-icon{font-size:1.2rem}
 
-/* ─── MOBILE ─── */
-@media(max-width:900px){
-  nav{padding:.9rem 1.25rem}
+/* MOBILE */
+@media(max-width:860px){
+  nav{padding:.8rem 1.1rem}
   .nav-links,.btn-ghost{display:none}
-  .mobile-menu-btn{display:block}
-  .hero{padding:6rem 1.25rem 4rem}
+  .mob-btn{display:block}
+  .hero{padding:5.5rem 1.25rem 3.5rem}
   .hero::before{display:none}
-  .hero-inner{grid-template-columns:1fr;gap:2.5rem}
+  .hero-inner{grid-template-columns:1fr}
   .hero-right{display:none}
-  .about-strip-inner{grid-template-columns:1fr;gap:2rem}
-  .about-avatar-small{width:100px;height:100px}
-  .service-page-hero{padding:6rem 1.25rem 3rem}
-  .service-detail,.how,.areas,.reviews,.faq,.contact,.about-strip{padding:4rem 1.25rem}
-  .contact-inner{grid-template-columns:1fr;gap:2.5rem}
-  .how-steps{grid-template-columns:1fr 1fr}
-  footer{padding:2rem 1.25rem;flex-direction:column;text-align:center}
+  .slider-section,.services-overview,.about,.how,.areas,.reviews,.faq,.contact{padding:3rem 1.25rem}
+  .contact-inner{grid-template-columns:1fr;gap:2rem}
+  .about-inner{grid-template-columns:1fr;gap:1.75rem}
+  .sp-hero,.sd{padding:5.5rem 1.25rem 3rem}
+  .cta-banner{padding:.9rem 1.25rem}
+  footer{padding:1.75rem 1.25rem;flex-direction:column;text-align:center}
+  .wa-float{bottom:.9rem;right:.9rem;font-size:.78rem;padding:.65rem 1rem}
+  .slide{flex:0 0 calc(85% - .5rem)}
   .bark-bar{flex-wrap:wrap}
-  .bark-stat{min-width:50%;border-bottom:1px solid var(--border)}
-  .wa-float{bottom:1rem;right:1rem;font-size:.82rem;padding:.7rem 1.1rem}
+  .bstat{min-width:50%;border-bottom:1px solid var(--border)}
 }
 </style>
 </head>
 <body>
 
-<!-- WHATSAPP FLOAT -->
-<a href="https://wa.me/447356287590?text=Hi%20Abdul%2C%20I%20found%20you%20online%20and%20need%20some%20help%20with%20my%20computer." class="wa-float" target="_blank" rel="noopener">
-  <span class="wa-icon">💬</span> WhatsApp Me
-</a>
+<!-- WA FLOAT -->
+<a href="https://wa.me/447356287590?text=Hi%20Abdul%2C%20I%20need%20help%20with%20my%20computer." class="wa-float" target="_blank" rel="noopener">💬 WhatsApp Me</a>
 
 <!-- NAV -->
 <nav>
@@ -275,26 +304,25 @@ footer{background:var(--text);color:rgba(255,255,255,.7);padding:3rem;display:fl
   </ul>
   <div class="nav-cta">
     <a href="tel:07356287590" class="btn-ghost">📞 07356 287590</a>
-    <a href="#contact-section" class="btn-primary" onclick="showPage('main')">Get Help Now</a>
-    <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+    <a href="#contact-section" class="btn-call" onclick="showPage('main')">Get Help Now</a>
+    <button class="mob-btn" onclick="toggleMenu()">☰</button>
   </div>
 </nav>
 
 <!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobile-menu">
+<div class="mob-menu" id="mob-menu">
   <a href="#" onclick="showPage('main');closeMenu()">🏠 Home</a>
-  <a href="#" onclick="showPage('home-repair');closeMenu()">🖥️ Home Computer Repair</a>
-  <a href="#" onclick="showPage('business');closeMenu()">🏢 Business IT Support</a>
-  <a href="#" onclick="showPage('teaching');closeMenu()">👨‍🏫 Teaching &amp; Digital Skills</a>
-  <a href="#" onclick="showPage('consulting');closeMenu()">💡 IT Consulting</a>
+  <a href="#" onclick="showPage('home-repair');closeMenu()">🖥️ Home Repair</a>
+  <a href="#" onclick="showPage('business');closeMenu()">🏢 Business IT</a>
+  <a href="#" onclick="showPage('teaching');closeMenu()">👨‍🏫 Teaching</a>
+  <a href="#" onclick="showPage('consulting');closeMenu()">💡 Consulting</a>
   <a href="#reviews-section" onclick="closeMenu()">⭐ Reviews</a>
   <a href="#contact-section" onclick="closeMenu()">✉️ Contact</a>
-  <a href="tel:07356287590" class="mm-call">📞 Call: 07356 287590</a>
-  <a href="sms:07356287590" class="mm-wa">💬 Text: 07356 287590</a>
-  <a href="https://wa.me/447356287590" target="_blank" rel="noopener" style="color:#059669;font-weight:600">💬 WhatsApp Me</a>
+  <a href="tel:07356287590" class="mob-call">📞 07356 287590</a>
+  <a href="https://wa.me/447356287590" target="_blank" rel="noopener" class="mob-wa">💬 WhatsApp Me</a>
 </div>
 
-<!-- ═══════════════════════════════════ MAIN PAGE ═══════════════════════════════════ -->
+<!-- ════════════════ MAIN PAGE ════════════════ -->
 <div id="page-main" class="page active">
 
 <!-- HERO -->
@@ -303,95 +331,86 @@ footer{background:var(--text);color:rgba(255,255,255,.7);padding:3rem;display:fl
     <div class="hero-left">
       <div class="hero-eyebrow">Available in Willenhall &amp; West Midlands</div>
       <h1>Your <span class="blue">Friendly</span><br>Local Tech Guy</h1>
-      <p class="hero-sub">I'm Abdul — I fix computers, sort out Wi-Fi, repair screens and keep your business running. No jargon, no hidden fees. I come to you.</p>
+      <p class="hero-sub">I'm Abdul — I fix computers, sort Wi-Fi, repair screens and support your business. No jargon, no hidden fees. I come to you.</p>
       <div class="hero-ctas">
-        <a href="tel:07356287590" class="cta-main">📞 Call: 07356 287590</a>
-        <a href="https://wa.me/447356287590?text=Hi%20Abdul%2C%20I%20need%20some%20help%20with%20my%20computer." class="cta-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
-        <a href="#contact-section" class="cta-outline">Send a Message →</a>
+        <a href="tel:07356287590" class="cta-main">📞 07356 287590</a>
+        <a href="https://wa.me/447356287590?text=Hi%20Abdul%2C%20I%20need%20help." class="cta-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
+        <a href="#contact-section" class="cta-sec">Send a Message →</a>
       </div>
-      <div class="hero-trust">
+      <div class="trust-row">
         <div class="trust-pill">✅ <span>No fix, no fee</span></div>
         <div class="trust-pill">🏠 <span>I come to you</span></div>
-        <div class="trust-pill">⭐ <span>5.0 on Bark (12 reviews)</span></div>
-        <div class="trust-pill">🔒 <span>Enhanced DBS checked</span></div>
+        <div class="trust-pill">⭐ <span>5.0 Bark · 12 reviews</span></div>
+        <div class="trust-pill">🔒 <span>DBS checked</span></div>
       </div>
     </div>
     <div class="hero-right">
-      <div class="avatar-wrap">
-        <div class="avatar-bg-circle"></div>
-        <svg viewBox="0 0 320 340" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;border-radius:50%;display:block;overflow:hidden">
-          <rect width="320" height="340" fill="#e8f4f0"/>
-          <rect x="60" y="240" width="200" height="100" rx="10" fill="#6dbfb0"/>
-          <rect x="88" y="234" width="144" height="20" rx="6" fill="#5aada0"/>
-          <polygon points="140,238 160,260 180,238 175,228 160,252 145,228" fill="#7dcec0"/>
-          <line x1="160" y1="262" x2="160" y2="340" stroke="#5aada0" stroke-width="2"/>
-          <circle cx="160" cy="272" r="4" fill="#fff" opacity="0.8"/>
-          <circle cx="160" cy="286" r="4" fill="#fff" opacity="0.8"/>
-          <circle cx="160" cy="300" r="4" fill="#fff" opacity="0.8"/>
-          <rect x="170" y="272" width="28" height="22" rx="3" fill="#4d9d90" opacity="0.7"/>
-          <rect x="130" y="222" width="60" height="20" rx="6" fill="#8b5e3c"/>
-          <ellipse cx="160" cy="170" rx="68" ry="74" fill="#8b5e3c"/>
-          <path d="M94 188 Q96 218 116 232 Q136 244 160 248 Q184 244 204 232 Q224 218 226 188 Q218 204 200 218 Q182 228 160 232 Q138 228 120 218 Q102 204 94 188Z" fill="#2a1505" opacity="0.88"/>
-          <path d="M144 210 Q153 218 160 216 Q167 218 176 210" stroke="#2a1505" stroke-width="3" fill="none" stroke-linecap="round"/>
-          <ellipse cx="160" cy="105" rx="68" ry="38" fill="#1a0800"/>
-          <ellipse cx="93" cy="138" rx="15" ry="32" fill="#1a0800"/>
-          <ellipse cx="227" cy="138" rx="15" ry="32" fill="#1a0800"/>
-          <ellipse cx="160" cy="128" rx="66" ry="16" fill="#1a0800"/>
-          <ellipse cx="91" cy="172" rx="12" ry="18" fill="#7a5230"/>
-          <ellipse cx="229" cy="172" rx="12" ry="18" fill="#7a5230"/>
-          <ellipse cx="91" cy="172" rx="7" ry="11" fill="#8b5e3c"/>
-          <ellipse cx="229" cy="172" rx="7" ry="11" fill="#8b5e3c"/>
-          <ellipse cx="141" cy="162" rx="13" ry="12" fill="#fff"/>
-          <ellipse cx="179" cy="162" rx="13" ry="12" fill="#fff"/>
-          <ellipse cx="141" cy="163" rx="8" ry="8" fill="#1a0800"/>
-          <ellipse cx="179" cy="163" rx="8" ry="8" fill="#1a0800"/>
-          <circle cx="144" cy="159" r="3" fill="#fff"/>
-          <circle cx="182" cy="159" r="3" fill="#fff"/>
-          <circle cx="141" cy="162" r="18" fill="none" stroke="#1e1e1e" stroke-width="3"/>
-          <circle cx="179" cy="162" r="18" fill="none" stroke="#1e1e1e" stroke-width="3"/>
-          <path d="M159 162 Q160 158 161 162" stroke="#1e1e1e" stroke-width="2.5" fill="none"/>
-          <line x1="123" y1="157" x2="92" y2="152" stroke="#1e1e1e" stroke-width="2" stroke-linecap="round"/>
-          <line x1="197" y1="157" x2="228" y2="152" stroke="#1e1e1e" stroke-width="2" stroke-linecap="round"/>
-          <path d="M126 144 Q141 136 156 143" stroke="#1a0800" stroke-width="4" fill="none" stroke-linecap="round"/>
-          <path d="M164 143 Q179 136 194 144" stroke="#1a0800" stroke-width="4" fill="none" stroke-linecap="round"/>
-          <path d="M146 188 Q160 198 174 188" stroke="#6b3a1f" stroke-width="3" fill="none" stroke-linecap="round"/>
-          <rect x="62" y="272" width="130" height="78" rx="8" fill="#1e293b"/>
-          <rect x="66" y="276" width="122" height="68" rx="5" fill="#0f172a"/>
-          <rect x="70" y="280" width="114" height="61" rx="3" fill="#0a0f1a"/>
-          <rect x="76" y="286" width="44" height="5" rx="2" fill="#3b82f6" opacity="0.9"/>
-          <rect x="76" y="294" width="34" height="3" rx="2" fill="#60a5fa" opacity="0.55"/>
-          <rect x="76" y="300" width="40" height="3" rx="2" fill="#60a5fa" opacity="0.4"/>
-          <rect x="76" y="306" width="28" height="3" rx="2" fill="#60a5fa" opacity="0.3"/>
-          <rect x="126" y="285" width="52" height="50" rx="4" fill="#1d4ed8" opacity="0.75"/>
-          <text x="152" y="315" text-anchor="middle" font-size="22" fill="#4ade80">✓</text>
-          <circle cx="248" cy="88" r="28" fill="#fff" stroke="#e2e6f0" stroke-width="2"/>
-          <text x="248" y="97" text-anchor="middle" font-size="22">🔧</text>
-        </svg>
-        <div class="speech-bubble">
-          <p>Hi! I'm Abdul 👋 How can I help with your tech today?</p>
-        </div>
-      </div>
-      <div class="hero-quick-contact">
-        <div class="hqc-title">Get in touch right now</div>
-        <div class="hqc-row">
-          <div class="hqc-icon" style="background:#eff4ff">📞</div>
-          <div>
-            <div class="hqc-lbl">Call me</div>
-            <a href="tel:07356287590" class="hqc-val">07356 287590</a>
+      <div style="width:100%;max-width:340px">
+        <div style="font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:.5rem">What I can help with</div>
+        <div style="position:relative;overflow:hidden;border-radius:16px">
+          <!-- HERO SLIDES -->
+          <div id="hero-slides" style="display:flex;transition:transform .5s ease">
+            <div class="hslide" style="min-width:100%;background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:1.75rem;box-shadow:var(--shadow-md)">
+              <div style="font-size:2.2rem;margin-bottom:.85rem">🖥️</div>
+              <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1.15rem;margin-bottom:.5rem;color:var(--text)">Home Computer Repair</div>
+              <p style="font-size:.85rem;color:var(--muted);line-height:1.65;margin-bottom:1.1rem">Screen repairs, virus removal, speed-ups, Wi-Fi — I come to your home across the West Midlands.</p>
+              <ul style="list-style:none;display:flex;flex-direction:column;gap:.35rem;margin-bottom:1.25rem">
+                <li style="font-size:.82rem;color:var(--text);display:flex;gap:.4rem">✓ Screen &amp; hardware repair</li>
+                <li style="font-size:.82rem;color:var(--text);display:flex;gap:.4rem">✓ Virus &amp; malware removal</li>
+                <li style="font-size:.82rem;color:var(--text);display:flex;gap:.4rem">✓ Speed-up &amp; SSD upgrades</li>
+                <li style="font-size:.82rem;color:var(--text);display:flex;gap:.4rem">✓ Wi-Fi &amp; printer setup</li>
+              </ul>
+              <span onclick="showPage('home-repair')" style="display:inline-flex;align-items:center;gap:.4rem;background:var(--accent);color:#fff;font-family:'Nunito',sans-serif;font-weight:800;font-size:.82rem;padding:.55rem 1.1rem;border-radius:8px;cursor:pointer">See Home Services →</span>
+            </div>
+            <div class="hslide" style="min-width:100%;background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:1.75rem;box-shadow:var(--shadow-md)">
+              <div style="font-size:2.2rem;margin-bottom:.85rem">🏢</div>
+              <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1.15rem;margin-bottom:.5rem;color:var(--text)">Business IT Support</div>
+              <p style="font-size:.85rem;color:var(--muted);line-height:1.65;margin-bottom:1.1rem">Networks, Microsoft 365, Intune and backups — keep your business running without the big agency costs.</p>
+              <ul style="list-style:none;display:flex;flex-direction:column;gap:.35rem;margin-bottom:1.25rem">
+                <li style="font-size:.82rem;color:var(--text);display:flex;gap:.4rem">✓ Network &amp; security setup</li>
+                <li style="font-size:.82rem;color:var(--text);display:flex;gap:.4rem">✓ Microsoft 365 &amp; Intune</li>
+                <li style="font-size:.82rem;color:var(--text);display:flex;gap:.4rem">✓ Remote &amp; on-site support</li>
+                <li style="font-size:.82rem;color:var(--text);display:flex;gap:.4rem">✓ Backups &amp; cybersecurity</li>
+              </ul>
+              <span onclick="showPage('business')" style="display:inline-flex;align-items:center;gap:.4rem;background:var(--yellow);color:#fff;font-family:'Nunito',sans-serif;font-weight:800;font-size:.82rem;padding:.55rem 1.1rem;border-radius:8px;cursor:pointer">See Business Services →</span>
+            </div>
+            <div class="hslide" style="min-width:100%;background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:1.75rem;box-shadow:var(--shadow-md)">
+              <div style="font-size:2.2rem;margin-bottom:.85rem">👨‍🏫</div>
+              <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1.15rem;margin-bottom:.5rem;color:var(--text)">Teaching &amp; Digital Skills</div>
+              <p style="font-size:.85rem;color:var(--muted);line-height:1.65;margin-bottom:1.1rem">Patient one-to-one lessons for elderly people, children or anyone wanting to feel confident with tech.</p>
+              <ul style="list-style:none;display:flex;flex-direction:column;gap:.35rem;margin-bottom:1.25rem">
+                <li style="font-size:.82rem;color:var(--text);display:flex;gap:.4rem">✓ Computer basics for seniors</li>
+                <li style="font-size:.82rem;color:var(--text);display:flex;gap:.4rem">✓ Internet safety for children</li>
+                <li style="font-size:.82rem;color:var(--text);display:flex;gap:.4rem">✓ Email, video calls &amp; more</li>
+                <li style="font-size:.82rem;color:var(--text);display:flex;gap:.4rem">✓ Your pace, no jargon</li>
+              </ul>
+              <span onclick="showPage('teaching')" style="display:inline-flex;align-items:center;gap:.4rem;background:#059669;color:#fff;font-family:'Nunito',sans-serif;font-weight:800;font-size:.82rem;padding:.55rem 1.1rem;border-radius:8px;cursor:pointer">See Teaching →</span>
+            </div>
+            <div class="hslide" style="min-width:100%;background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:1.75rem;box-shadow:var(--shadow-md)">
+              <div style="font-size:2.2rem;margin-bottom:.85rem">💡</div>
+              <div style="font-family:'Nunito',sans-serif;font-weight:800;font-size:1.15rem;margin-bottom:.5rem;color:var(--text)">IT Consulting</div>
+              <p style="font-size:.85rem;color:var(--muted);line-height:1.65;margin-bottom:1.1rem">Honest buying advice, security audits and IT strategy — no sales pressure, first chat always free.</p>
+              <ul style="list-style:none;display:flex;flex-direction:column;gap:.35rem;margin-bottom:1.25rem">
+                <li style="font-size:.82rem;color:var(--text);display:flex;gap:.4rem">✓ Tech buying advice</li>
+                <li style="font-size:.82rem;color:var(--text);display:flex;gap:.4rem">✓ Security audits</li>
+                <li style="font-size:.82rem;color:var(--text);display:flex;gap:.4rem">✓ IT strategy for businesses</li>
+                <li style="font-size:.82rem;color:var(--text);display:flex;gap:.4rem">✓ Free initial consultation</li>
+              </ul>
+              <span onclick="showPage('consulting')" style="display:inline-flex;align-items:center;gap:.4rem;background:#7c3aed;color:#fff;font-family:'Nunito',sans-serif;font-weight:800;font-size:.82rem;padding:.55rem 1.1rem;border-radius:8px;cursor:pointer">See Consulting →</span>
+            </div>
           </div>
         </div>
-        <div class="hqc-row">
-          <div class="hqc-icon" style="background:#f0fdf7">💬</div>
-          <div>
-            <div class="hqc-lbl">WhatsApp</div>
-            <a href="https://wa.me/447356287590" class="hqc-val" target="_blank" rel="noopener" style="color:#059669">Message me</a>
+        <!-- SLIDE CONTROLS -->
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:1rem">
+          <div style="display:flex;gap:.4rem" id="hero-dots">
+            <div style="width:8px;height:8px;border-radius:50%;background:var(--accent);transition:background .2s"></div>
+            <div style="width:8px;height:8px;border-radius:50%;background:var(--border2);transition:background .2s"></div>
+            <div style="width:8px;height:8px;border-radius:50%;background:var(--border2);transition:background .2s"></div>
+            <div style="width:8px;height:8px;border-radius:50%;background:var(--border2);transition:background .2s"></div>
           </div>
-        </div>
-        <div class="hqc-row">
-          <div class="hqc-icon" style="background:#fffbeb">📍</div>
-          <div>
-            <div class="hqc-lbl">Based in</div>
-            <span class="hqc-val" style="font-size:.85rem">Willenhall, West Midlands</span>
+          <div style="display:flex;gap:.4rem">
+            <button onclick="heroSlide(-1)" style="width:34px;height:34px;border-radius:50%;border:1.5px solid var(--border2);background:#fff;cursor:pointer;font-size:.85rem;display:flex;align-items:center;justify-content:center;transition:border-color .2s">←</button>
+            <button onclick="heroSlide(1)" style="width:34px;height:34px;border-radius:50%;border:1.5px solid var(--border2);background:#fff;cursor:pointer;font-size:.85rem;display:flex;align-items:center;justify-content:center;transition:border-color .2s">→</button>
           </div>
         </div>
       </div>
@@ -399,126 +418,144 @@ footer{background:var(--text);color:rgba(255,255,255,.7);padding:3rem;display:fl
   </div>
 </section>
 
-<!-- SERVICES OVERVIEW -->
-<section style="padding:5rem 3rem;background:#fff">
-  <div style="max-width:1100px;margin:0 auto">
-    <div class="section-label">What I can help with</div>
-    <h2 class="section-heading">Pick what you need help with</h2>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin-top:2rem">
-
-      <div onclick="showPage('home-repair')" style="cursor:pointer;background:var(--accent-pale);border:2px solid #bfdbfe;border-radius:20px;padding:2.5rem;transition:box-shadow .2s,transform .2s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(29,78,216,.12)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
-        <div style="font-size:2.5rem;margin-bottom:1rem">🏠</div>
-        <h3 style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.4rem;margin-bottom:.6rem;color:var(--text)">Home Computer Repair</h3>
-        <p style="font-size:.9rem;color:var(--muted);line-height:1.7;margin-bottom:1.25rem">Laptop broken? Slow PC? Virus trouble? I come to your home, fix the problem and explain everything in plain English.</p>
-        <ul style="list-style:none;display:flex;flex-direction:column;gap:.4rem;margin-bottom:1.5rem">
-          <li style="font-size:.875rem;color:var(--text);display:flex;gap:.5rem">✓ Screen replacements</li>
-          <li style="font-size:.875rem;color:var(--text);display:flex;gap:.5rem">✓ Virus &amp; malware removal</li>
-          <li style="font-size:.875rem;color:var(--text);display:flex;gap:.5rem">✓ Speed-up &amp; tune-up</li>
-          <li style="font-size:.875rem;color:var(--text);display:flex;gap:.5rem">✓ Wi-Fi &amp; printer setup</li>
-        </ul>
-        <span style="display:inline-flex;align-items:center;gap:.4rem;background:var(--accent-light);color:#fff;font-family:'Syne',sans-serif;font-weight:700;font-size:.875rem;padding:.6rem 1.3rem;border-radius:8px">See Home Services →</span>
+<!-- SERVICE SLIDER -->
+<section class="slider-section">
+  <div class="slider-inner">
+    <div class="slider-label">What I offer</div>
+    <h2 class="slider-title">How can I help you today?</h2>
+    <div class="slider-wrap">
+      <div class="slider-track" id="slider-track">
+        <div class="slide" onclick="showPage('home-repair')">
+          <span class="slide-icon">🖥️</span>
+          <div class="slide-title">Home Computer Repair</div>
+          <div class="slide-desc">Screen repairs, virus removal, slow PC fix, Wi-Fi setup — I come to your home across the West Midlands.</div>
+          <span class="slide-btn">See services →</span>
+        </div>
+        <div class="slide" onclick="showPage('business')">
+          <span class="slide-icon">🏢</span>
+          <div class="slide-title">Business IT Support</div>
+          <div class="slide-desc">Networks, Microsoft 365, Intune, remote support and backups — keep your business running smoothly.</div>
+          <span class="slide-btn">See services →</span>
+        </div>
+        <div class="slide" onclick="showPage('teaching')">
+          <span class="slide-icon">👨‍🏫</span>
+          <div class="slide-title">Teaching &amp; Digital Skills</div>
+          <div class="slide-desc">Patient one-to-one lessons for elderly people, children or anyone who wants to feel confident with tech.</div>
+          <span class="slide-btn">See services →</span>
+        </div>
+        <div class="slide" onclick="showPage('consulting')">
+          <span class="slide-icon">💡</span>
+          <div class="slide-title">IT Consulting</div>
+          <div class="slide-desc">Honest buying advice, security audits, IT strategy and second opinions — no sales pressure, ever.</div>
+          <span class="slide-btn">See services →</span>
+        </div>
       </div>
-
-      <div onclick="showPage('business')" style="cursor:pointer;background:var(--yellow-bg);border:2px solid #fde68a;border-radius:20px;padding:2.5rem;transition:box-shadow .2s,transform .2s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(217,119,6,.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
-        <div style="font-size:2.5rem;margin-bottom:1rem">🏢</div>
-        <h3 style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.4rem;margin-bottom:.6rem;color:var(--text)">Small Business IT Support</h3>
-        <p style="font-size:.9rem;color:var(--muted);line-height:1.7;margin-bottom:1.25rem">Keep your business running smoothly. I handle networks, Microsoft 365, backups and on-site support — without the big agency fees.</p>
-        <ul style="list-style:none;display:flex;flex-direction:column;gap:.4rem;margin-bottom:1.5rem">
-          <li style="font-size:.875rem;color:var(--text);display:flex;gap:.5rem">✓ Network &amp; security setup</li>
-          <li style="font-size:.875rem;color:var(--text);display:flex;gap:.5rem">✓ Microsoft 365 &amp; Intune</li>
-          <li style="font-size:.875rem;color:var(--text);display:flex;gap:.5rem">✓ Remote &amp; on-site support</li>
-          <li style="font-size:.875rem;color:var(--text);display:flex;gap:.5rem">✓ Automated backups</li>
-        </ul>
-        <span style="display:inline-flex;align-items:center;gap:.4rem;background:var(--yellow);color:#fff;font-family:'Syne',sans-serif;font-weight:700;font-size:.875rem;padding:.6rem 1.3rem;border-radius:8px">See Business Services →</span>
+      <div class="slider-nav">
+        <button class="snav-btn" onclick="slideNav(-1)">←</button>
+        <button class="snav-btn" onclick="slideNav(1)">→</button>
+        <div class="sdots">
+          <div class="sdot active" id="dot0"></div>
+          <div class="sdot" id="dot1"></div>
+          <div class="sdot" id="dot2"></div>
+          <div class="sdot" id="dot3"></div>
+        </div>
       </div>
-
-      <div onclick="showPage('teaching')" style="cursor:pointer;background:#f0fdf7;border:2px solid #a7f3d0;border-radius:20px;padding:2.5rem;transition:box-shadow .2s,transform .2s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(5,150,105,.12)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
-        <div style="font-size:2.5rem;margin-bottom:1rem">👨‍🏫</div>
-        <h3 style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.4rem;margin-bottom:.6rem;color:var(--text)">Teaching & Digital Skills</h3>
-        <p style="font-size:.9rem;color:var(--muted);line-height:1.7;margin-bottom:1.25rem">Patient, friendly one-to-one lessons for elderly people, children or anyone who wants to feel more confident with technology.</p>
-        <ul style="list-style:none;display:flex;flex-direction:column;gap:.4rem;margin-bottom:1.5rem">
-          <li style="font-size:.875rem;color:var(--text);display:flex;gap:.5rem">✓ Computer basics for seniors</li>
-          <li style="font-size:.875rem;color:var(--text);display:flex;gap:.5rem">✓ Safe internet for children</li>
-          <li style="font-size:.875rem;color:var(--text);display:flex;gap:.5rem">✓ Email, video calls &amp; more</li>
-          <li style="font-size:.875rem;color:var(--text);display:flex;gap:.5rem">✓ No jargon, go at your pace</li>
-        </ul>
-        <span style="display:inline-flex;align-items:center;gap:.4rem;background:#059669;color:#fff;font-family:'Syne',sans-serif;font-weight:700;font-size:.875rem;padding:.6rem 1.3rem;border-radius:8px">See Teaching Services →</span>
-      </div>
-
-      <div onclick="showPage('consulting')" style="cursor:pointer;background:#fdf4ff;border:2px solid #e9d5ff;border-radius:20px;padding:2.5rem;transition:box-shadow .2s,transform .2s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(124,58,237,.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
-        <div style="font-size:2.5rem;margin-bottom:1rem">💡</div>
-        <h3 style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.4rem;margin-bottom:.6rem;color:var(--text)">IT Consulting</h3>
-        <p style="font-size:.9rem;color:var(--muted);line-height:1.7;margin-bottom:1.25rem">Not sure what tech you need, or want a second opinion before spending money? I'll give you honest, unbiased advice with no sales pressure.</p>
-        <ul style="list-style:none;display:flex;flex-direction:column;gap:.4rem;margin-bottom:1.5rem">
-          <li style="font-size:.875rem;color:var(--text);display:flex;gap:.5rem">✓ Tech buying advice</li>
-          <li style="font-size:.875rem;color:var(--text);display:flex;gap:.5rem">✓ IT strategy for small businesses</li>
-          <li style="font-size:.875rem;color:var(--text);display:flex;gap:.5rem">✓ Security audits &amp; reviews</li>
-          <li style="font-size:.875rem;color:var(--text);display:flex;gap:.5rem">✓ Project planning &amp; setup</li>
-        </ul>
-        <span style="display:inline-flex;align-items:center;gap:.4rem;background:#7c3aed;color:#fff;font-family:'Syne',sans-serif;font-weight:700;font-size:.875rem;padding:.6rem 1.3rem;border-radius:8px">See Consulting →</span>
-      </div>
+    </div>
   </div>
 </section>
 
-<!-- ABOUT STRIP -->
-<div class="about-strip">
-  <div class="about-strip-inner">
-    <div class="about-avatar-small">
-      <svg viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="70" cy="70" r="70" fill="#4a9e92"/>
-        <!-- shirt teal -->
-        <ellipse cx="70" cy="128" rx="52" ry="38" fill="#6dbfb0"/>
-        <rect x="42" y="98" width="56" height="45" rx="3" fill="#6dbfb0"/>
-        <line x1="70" y1="103" x2="70" y2="140" stroke="#5aada0" stroke-width="1.5"/>
-        <circle cx="70" cy="108" r="2.5" fill="#fff" opacity="0.85"/>
-        <circle cx="70" cy="117" r="2.5" fill="#fff" opacity="0.85"/>
-        <!-- collar -->
-        <polygon points="62,100 70,113 78,100 76,95 70,108 64,95" fill="#7dcec0" opacity="0.95"/>
-        <!-- neck -->
-        <rect x="64" y="86" width="12" height="18" rx="5" fill="#8b5e3c"/>
-        <!-- head -->
-        <ellipse cx="70" cy="68" rx="28" ry="30" fill="#8b5e3c"/>
-        <!-- hair -->
-        <ellipse cx="70" cy="44" rx="28" ry="14" fill="#1a0800"/>
-        <ellipse cx="43" cy="58" rx="7" ry="14" fill="#1a0800"/>
-        <ellipse cx="97" cy="58" rx="7" ry="14" fill="#1a0800"/>
-        <!-- beard -->
-        <path d="M43 75 Q45 90 58 97 Q70 102 82 97 Q95 90 97 75 Q92 83 82 90 Q70 95 58 90 Q48 83 43 75Z" fill="#2a1505" opacity="0.85"/>
-        <!-- ears -->
-        <ellipse cx="42" cy="70" rx="6" ry="8" fill="#7a5230"/>
-        <ellipse cx="98" cy="70" rx="6" ry="8" fill="#7a5230"/>
-        <!-- eyes -->
-        <ellipse cx="61" cy="65" rx="6" ry="5.5" fill="#fff"/>
-        <ellipse cx="79" cy="65" rx="6" ry="5.5" fill="#fff"/>
-        <ellipse cx="61" cy="65.5" rx="3.5" ry="3.5" fill="#2a1505"/>
-        <ellipse cx="79" cy="65.5" rx="3.5" ry="3.5" fill="#2a1505"/>
-        <circle cx="62.5" cy="64" r="1.2" fill="#fff"/>
-        <circle cx="80.5" cy="64" r="1.2" fill="#fff"/>
-        <!-- glasses round frames -->
-        <circle cx="61" cy="65" r="9" fill="none" stroke="#2d2d2d" stroke-width="1.8"/>
-        <circle cx="79" cy="65" r="9" fill="none" stroke="#2d2d2d" stroke-width="1.8"/>
-        <path d="M70 65 Q70.5 63.5 71 65" stroke="#2d2d2d" stroke-width="1.5" fill="none"/>
-        <line x1="52" y1="62" x2="43" y2="60" stroke="#2d2d2d" stroke-width="1.5" stroke-linecap="round"/>
-        <line x1="88" y1="62" x2="97" y2="60" stroke="#2d2d2d" stroke-width="1.5" stroke-linecap="round"/>
-        <!-- eyebrows -->
-        <path d="M52 56 Q61 52 70 56" stroke="#1a0800" stroke-width="2" fill="none" stroke-linecap="round"/>
-        <path d="M70 56 Q79 52 88 56" stroke="#1a0800" stroke-width="2" fill="none" stroke-linecap="round"/>
-        <!-- smile -->
-        <path d="M62 81 Q70 87 78 81" stroke="#6b3a1f" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+<!-- CTA BANNER -->
+<div class="cta-banner">
+  <p>🔧 <strong>Need help today?</strong> Most jobs booked within 24–48 hours. No fix, no fee — guaranteed.</p>
+  <div class="cta-banner-btns">
+    <a href="tel:07356287590" class="cta-b-call">📞 Call Now</a>
+    <a href="https://wa.me/447356287590" class="cta-b-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
+    <a href="#contact-section" class="cta-b-form">✉️ Send a Message</a>
+  </div>
+</div>
+
+<!-- SERVICES OVERVIEW -->
+<section class="services-overview">
+  <div class="so-inner">
+    <div class="sec-label">All services</div>
+    <h2 class="sec-title">Pick what you need help with</h2>
+    <div class="so-grid">
+      <div class="so-card" onclick="showPage('home-repair')">
+        <span class="so-icon">🏠</span>
+        <div class="so-name">Home Computer Repair</div>
+        <p class="so-desc">I come to your home and fix the problem in plain English — no jargon, no surprise charges.</p>
+        <ul class="so-list">
+          <li>Screen replacements</li><li>Virus &amp; malware removal</li><li>Speed-up &amp; tune-up</li><li>Wi-Fi &amp; printer setup</li>
+        </ul>
+        <span class="so-link" style="background:var(--accent)">See Home Services →</span>
+      </div>
+      <div class="so-card" onclick="showPage('business')">
+        <span class="so-icon">🏢</span>
+        <div class="so-name">Business IT Support</div>
+        <p class="so-desc">Keep your business running without big agency costs. Flexible, no contracts.</p>
+        <ul class="so-list">
+          <li>Network &amp; security setup</li><li>Microsoft 365 &amp; Intune</li><li>Remote &amp; on-site support</li><li>Automated backups</li>
+        </ul>
+        <span class="so-link" style="background:var(--yellow)">See Business Services →</span>
+      </div>
+      <div class="so-card" onclick="showPage('teaching')">
+        <span class="so-icon">👨‍🏫</span>
+        <div class="so-name">Teaching &amp; Digital Skills</div>
+        <p class="so-desc">Patient, relaxed lessons at your home for elderly people, children or anyone who wants to learn.</p>
+        <ul class="so-list">
+          <li>Computer basics for seniors</li><li>Safe internet for children</li><li>Email, video calls &amp; more</li><li>No jargon, go at your pace</li>
+        </ul>
+        <span class="so-link" style="background:#059669">See Teaching →</span>
+      </div>
+      <div class="so-card" onclick="showPage('consulting')">
+        <span class="so-icon">💡</span>
+        <div class="so-name">IT Consulting</div>
+        <p class="so-desc">Honest, unbiased IT advice — buying guidance, security audits and strategy with no sales pressure.</p>
+        <ul class="so-list">
+          <li>Tech buying advice</li><li>Security audits</li><li>IT strategy for businesses</li><li>Free initial chat</li>
+        </ul>
+        <span class="so-link" style="background:#7c3aed">See Consulting →</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<div class="about">
+  <div class="about-inner">
+    <div class="about-av">
+      <svg viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="65" cy="65" r="65" fill="#1e3a5f"/>
+        <rect x="28" y="100" width="74" height="35" rx="8" fill="#6dbfb0"/>
+        <polygon points="54,103 65,118 76,103 72,96 65,111 58,96" fill="#7dcec0" opacity="0.9"/>
+        <rect x="58" y="84" width="14" height="20" rx="6" fill="#8b5e3c"/>
+        <ellipse cx="65" cy="66" rx="28" ry="30" fill="#8b5e3c"/>
+        <ellipse cx="65" cy="43" rx="28" ry="16" fill="#1a0800"/>
+        <ellipse cx="38" cy="57" rx="7" ry="12" fill="#1a0800"/>
+        <ellipse cx="92" cy="57" rx="7" ry="12" fill="#1a0800"/>
+        <ellipse cx="39" cy="68" rx="5" ry="7" fill="#7a5230"/>
+        <ellipse cx="91" cy="68" rx="5" ry="7" fill="#7a5230"/>
+        <path d="M37 74 Q39 88 50 95 Q65 102 80 95 Q91 88 93 74 Q87 82 77 88 Q65 93 53 88 Q43 82 37 74Z" fill="#2a1505" opacity="0.85"/>
+        <ellipse cx="55" cy="63" rx="6" ry="5.5" fill="#fff"/>
+        <ellipse cx="75" cy="63" rx="6" ry="5.5" fill="#fff"/>
+        <ellipse cx="55" cy="63.5" rx="3.5" ry="3.5" fill="#1a0800"/>
+        <ellipse cx="75" cy="63.5" rx="3.5" ry="3.5" fill="#1a0800"/>
+        <circle cx="55" cy="62" r="9" fill="none" stroke="#2d2d2d" stroke-width="1.8"/>
+        <circle cx="75" cy="62" r="9" fill="none" stroke="#2d2d2d" stroke-width="1.8"/>
+        <path d="M64 62 Q65 60 66 62" stroke="#2d2d2d" stroke-width="1.5" fill="none"/>
+        <line x1="46" y1="59" x2="38" y2="57" stroke="#2d2d2d" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="84" y1="59" x2="92" y2="57" stroke="#2d2d2d" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M47 52 Q55 47 63 52" stroke="#1a0800" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+        <path d="M67 52 Q75 47 83 52" stroke="#1a0800" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+        <path d="M56 79 Q65 86 74 79" stroke="#6b3a1f" stroke-width="2" fill="none" stroke-linecap="round"/>
       </svg>
     </div>
     <div class="about-text">
       <h2>Hi, I'm Abdul 👋</h2>
-      <p>I started Abdul's Tech Solutions because I wanted to offer the kind of IT support I'd want myself — honest, affordable, and actually explained in plain English. No corporate nonsense, no call centres. Just me, turning up on time and sorting your tech out properly.</p>
-      <p style="margin-top:.75rem">I'm based in Willenhall and cover the whole West Midlands. I hold a Level 4 in Network Engineering, Microsoft Azure and 365 certifications, and I'm fully DBS checked — so you can trust me in your home or office.</p>
-      <div class="about-chips">
-        <span class="about-chip">5+ Years Experience</span>
-        <span class="about-chip">500+ Repairs</span>
-        <span class="about-chip">Enhanced DBS</span>
-        <span class="about-chip">Level 4 Network Engineering</span>
-        <span class="about-chip">Microsoft Azure Certified</span>
-        <span class="about-chip">ITIL Foundation v4</span>
-        <span class="about-chip">Full UK Driving Licence</span>
+      <p>I started Abdul's Tech Solutions because I wanted to offer the kind of IT support I'd want myself — honest, affordable, and explained in plain English. No call centres, no corporate nonsense. Just me, turning up on time and sorting your tech properly.</p>
+      <p style="margin-top:.6rem">Based in Willenhall, covering the whole West Midlands. Level 4 Network Engineering, Microsoft Azure and 365 certified, fully DBS checked.</p>
+      <div class="chips">
+        <span class="chip">5+ Years Experience</span><span class="chip">500+ Repairs</span><span class="chip">Enhanced DBS</span><span class="chip">Level 4 Network Eng.</span><span class="chip">Microsoft Azure</span><span class="chip">ITIL Foundation v4</span>
       </div>
     </div>
   </div>
@@ -527,30 +564,14 @@ footer{background:var(--text);color:rgba(255,255,255,.7);padding:3rem;display:fl
 <!-- HOW IT WORKS -->
 <section class="how">
   <div class="how-inner">
-    <div class="section-label">Simple process</div>
-    <h2 class="section-heading">How it works</h2>
-    <p class="section-sub">Getting help is easy — no forms to fill in, no waiting on hold.</p>
+    <div class="sec-label">Simple process</div>
+    <h2 class="sec-title">How it works</h2>
+    <p class="sec-sub">Getting help is easy — no forms, no waiting on hold.</p>
     <div class="how-steps">
-      <div class="how-step">
-        <div class="step-num">1</div>
-        <div class="step-title">Call, text or WhatsApp</div>
-        <div class="step-desc">Get in touch however suits you. I'll ask a few quick questions to understand the problem.</div>
-      </div>
-      <div class="how-step">
-        <div class="step-num">2</div>
-        <div class="step-title">I give you a quote</div>
-        <div class="step-desc">You'll get a clear, honest price before I do anything. No surprises, no hidden charges.</div>
-      </div>
-      <div class="how-step">
-        <div class="step-num">3</div>
-        <div class="step-title">I come to you</div>
-        <div class="step-desc">I travel to your home or business across Willenhall and the West Midlands, usually within 24–48 hours.</div>
-      </div>
-      <div class="how-step">
-        <div class="step-num">4</div>
-        <div class="step-title">Problem solved ✓</div>
-        <div class="step-desc">I fix it, explain what I did, and only charge if the job's done. Simple as that.</div>
-      </div>
+      <div class="how-step"><div class="step-n">1</div><div class="step-t">Call, text or WhatsApp</div><div class="step-d">Get in touch however suits you. I'll ask a few quick questions to understand the problem.</div></div>
+      <div class="how-step"><div class="step-n">2</div><div class="step-t">I give you a quote</div><div class="step-d">Clear, honest price before I do anything. No surprises, no hidden charges.</div></div>
+      <div class="how-step"><div class="step-n">3</div><div class="step-t">I come to you</div><div class="step-d">I travel to your home or business across Willenhall and the West Midlands, usually within 24–48 hours.</div></div>
+      <div class="how-step"><div class="step-n">4</div><div class="step-t">Problem solved ✓</div><div class="step-d">I fix it, explain what I did, and only charge if the job's done.</div></div>
     </div>
   </div>
 </section>
@@ -558,53 +579,41 @@ footer{background:var(--text);color:rgba(255,255,255,.7);padding:3rem;display:fl
 <!-- AREAS -->
 <div class="areas">
   <div class="areas-inner">
-    <span class="areas-label">📍 Areas covered</span>
+    <span class="areas-lbl">📍 Areas covered</span>
     <div class="areas-tags">
-      <span class="area-tag">Willenhall</span>
-      <span class="area-tag">Walsall</span>
-      <span class="area-tag">Birmingham</span>
-      <span class="area-tag">Wolverhampton</span>
-      <span class="area-tag">West Bromwich</span>
-      <span class="area-tag">Dudley</span>
-      <span class="area-tag">Solihull</span>
-      <span class="area-tag">Coventry</span>
-      <span class="area-tag">Sutton Coldfield</span>
-      <span class="area-tag">Smethwick</span>
-      <span class="area-tag">Erdington</span>
-      <span class="area-tag">Darlaston</span>
-      <span class="area-tag">+ surrounding areas</span>
+      <span class="area-tag">Willenhall</span><span class="area-tag">Walsall</span><span class="area-tag">Birmingham</span><span class="area-tag">Wolverhampton</span><span class="area-tag">West Bromwich</span><span class="area-tag">Dudley</span><span class="area-tag">Solihull</span><span class="area-tag">Coventry</span><span class="area-tag">Sutton Coldfield</span><span class="area-tag">Smethwick</span><span class="area-tag">Erdington</span><span class="area-tag">Darlaston</span><span class="area-tag">+ surrounding areas</span>
     </div>
   </div>
 </div>
 
 <!-- REVIEWS -->
 <section class="reviews" id="reviews-section">
-  <div class="reviews-inner">
-    <div class="section-label">What clients say</div>
-    <h2 class="section-heading">12 Five-Star Reviews on Bark ⭐</h2>
-    <p class="section-sub">Every review is verified — all from real clients via Bark.com.</p>
+  <div class="rev-inner">
+    <div class="sec-label">What clients say</div>
+    <h2 class="sec-title">12 Five-Star Reviews on Bark ⭐</h2>
+    <p class="sec-sub">Every review is verified — all from real clients via Bark.com.</p>
     <div class="bark-bar">
-      <div class="bark-stat"><span class="bsn">5.0 ★</span><span class="bsl">Rating</span></div>
-      <div class="bark-stat"><span class="bsn">12</span><span class="bsl">Reviews</span></div>
-      <div class="bark-stat"><span class="bsn">23</span><span class="bsl">Hires on Bark</span></div>
-      <div class="bark-stat"><span class="bsn">6 min</span><span class="bsl">Response time</span></div>
-      <a href="https://www.bark.com/en/gb/b/abduls-tech-solutions/qJOR6v/" target="_blank" rel="noopener" class="bark-link-btn">View Bark Profile →</a>
+      <div class="bstat"><span class="bsn">5.0 ★</span><span class="bsl">Rating</span></div>
+      <div class="bstat"><span class="bsn">12</span><span class="bsl">Reviews</span></div>
+      <div class="bstat"><span class="bsn">23</span><span class="bsl">Hires on Bark</span></div>
+      <div class="bstat"><span class="bsn">6 min</span><span class="bsl">Response time</span></div>
+      <a href="https://www.bark.com/en/gb/b/abduls-tech-solutions/qJOR6v/" target="_blank" rel="noopener" class="bark-btn">View Bark Profile →</a>
     </div>
-    <div class="reviews-grid">
-      <div class="review-card"><div class="review-stars">★★★★★</div><div class="review-title">"Above and beyond"</div><p class="review-body">Had issues with my desktop. Abdul got it running again, then found me a new machine and set the whole lot up. I was amazed. Will be using him again 100%.</p><div class="review-author">— Andy Millar, April 2026</div></div>
-      <div class="review-card"><div class="review-stars">★★★★★</div><div class="review-title">"Drove 40 min at midnight to deliver my laptop"</div><p class="review-body">Screen smashed Tuesday evening — repaired and back to me by Thursday night, dropped off at midnight. The screen looks as good as new.</p><div class="review-author">— Louis Marsland, October 2025</div></div>
-      <div class="review-card"><div class="review-stars">★★★★★</div><div class="review-title">"Saved me a fair amount of money"</div><p class="review-body">Repaired my son's Dell quickly, kept me updated, and offered advice that saved me money. Would recommend and use again without hesitation.</p><div class="review-author">— Mr Imtyaz Jumani, August 2025</div></div>
-      <div class="review-card"><div class="review-stars">★★★★★</div><div class="review-title">"Sent photos once the job was done"</div><p class="review-body">Told the price, given a parts estimate, kept informed every step, sent pictures when complete. Would recommend to anyone.</p><div class="review-author">— Jude Rodney, August 2025</div></div>
-      <div class="review-card"><div class="review-stars">★★★★★</div><div class="review-title">"Keeps you informed throughout"</div><p class="review-body">Fixed my screen and everything else my laptop needed. Keeps you updated at every stage and gives top recommendations. Will recommend to friends and family.</p><div class="review-author">— Abdullahi, March 2026</div></div>
-      <div class="review-card"><div class="review-stars">★★★★★</div><div class="review-title">"Exceptional work ethics"</div><p class="review-body">Great guy — exceptional work ethics and very decent charges. Got my two laptops fixed and always responsive. Highly recommended.</p><div class="review-author">— Joy, March 2026</div></div>
-      <div class="review-card"><div class="review-stars">★★★★★</div><div class="review-title">"Set up and secured everything — 10/10"</div><p class="review-body">Set up and secured my PC and laptop at a great price. I recommend him for any tech work. 10/10.</p><div class="review-author">— Ken Vincent, March 2026</div></div>
-      <div class="review-card"><div class="review-stars">★★★★★</div><div class="review-title">"Sorted my printer and router"</div><p class="review-body">Managed to solve a complicated problem involving my printer and router. I can print important documents again. Thank you Abdul.</p><div class="review-author">— Mel Taylor, May 2026</div></div>
-      <div class="review-card"><div class="review-stars">★★★★★</div><div class="review-title">"Very knowledgeable and helpful"</div><p class="review-body">Abdul is very knowledgeable and helpful. I recommend his services.</p><div class="review-author">— Roland Browne, May 2026</div></div>
-      <div class="review-card"><div class="review-stars">★★★★★</div><div class="review-title">"Charging problem resolved quickly"</div><p class="review-body">Had a laptop charging problem — all resolved now. Very friendly and efficient service.</p><div class="review-author">— Stuart Spruce, November 2025</div></div>
-      <div class="review-card"><div class="review-stars">★★★★★</div><div class="review-title">"Brilliant service"</div><p class="review-body">Brilliant service and efficient delivery. Couldn't ask for more from a local tech specialist.</p><div class="review-author">— Royston Wharton, August 2025</div></div>
-      <div class="review-card"><div class="review-stars">★★★★★</div><div class="review-title">"Exactly what I sought"</div><p class="review-body">Needed qualified service and succeeded without reservation — exactly what I sought. Professional and reliable.</p><div class="review-author">— R. F. Lewis, May 2026</div></div>
+    <div class="rev-grid">
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><div class="rev-title">"Above and beyond"</div><p class="rev-body">Had issues with my desktop. Abdul got it running again, found me a new machine and set it all up. Will be using him again 100%.</p><div class="rev-author">— Andy Millar, April 2026</div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><div class="rev-title">"Drove 40 min at midnight to deliver my laptop"</div><p class="rev-body">Screen smashed Tuesday evening — repaired and back to me by Thursday night, dropped off at midnight. Looks as good as new.</p><div class="rev-author">— Louis Marsland, October 2025</div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><div class="rev-title">"Saved me a fair amount of money"</div><p class="rev-body">Repaired my son's Dell quickly, kept me updated, and offered advice that saved me money. Would recommend without hesitation.</p><div class="rev-author">— Mr Imtyaz Jumani, August 2025</div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><div class="rev-title">"Sent photos once the job was done"</div><p class="rev-body">Told the price, given a parts estimate, kept informed every step, sent pictures when complete. Would recommend to anyone.</p><div class="rev-author">— Jude Rodney, August 2025</div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><div class="rev-title">"Keeps you informed throughout"</div><p class="rev-body">Fixed my screen and everything else my laptop needed. Keeps you updated and gives top recommendations. Will recommend to family.</p><div class="rev-author">— Abdullahi, March 2026</div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><div class="rev-title">"Exceptional work ethics"</div><p class="rev-body">Exceptional work ethics and very decent charges. Got my two laptops fixed — always responsive. Highly recommended.</p><div class="rev-author">— Joy, March 2026</div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><div class="rev-title">"Set up and secured everything — 10/10"</div><p class="rev-body">Set up and secured my PC and laptop at a great price. I recommend him for any tech work. 10/10.</p><div class="rev-author">— Ken Vincent, March 2026</div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><div class="rev-title">"Sorted my printer and router"</div><p class="rev-body">Solved a complicated problem with my printer and router. I can print important documents again. Thank you Abdul.</p><div class="rev-author">— Mel Taylor, May 2026</div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><div class="rev-title">"Very knowledgeable and helpful"</div><p class="rev-body">Abdul is very knowledgeable and helpful. I recommend his services without hesitation.</p><div class="rev-author">— Roland Browne, May 2026</div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><div class="rev-title">"Charging problem resolved quickly"</div><p class="rev-body">Had a laptop charging problem — all resolved now. Very friendly and efficient service.</p><div class="rev-author">— Stuart Spruce, November 2025</div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><div class="rev-title">"Brilliant service"</div><p class="rev-body">Brilliant service and efficient delivery. Couldn't ask for more from a local tech specialist.</p><div class="rev-author">— Royston Wharton, August 2025</div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><div class="rev-title">"Exactly what I sought"</div><p class="rev-body">Needed qualified service and succeeded without reservation — exactly what I sought. Professional and reliable.</p><div class="rev-author">— R. F. Lewis, May 2026</div></div>
     </div>
-    <div style="text-align:center;margin-top:2rem">
+    <div style="text-align:center;margin-top:1.75rem">
       <a href="tel:07356287590" class="cta-main" style="display:inline-flex">📞 Call to Book: 07356 287590</a>
     </div>
   </div>
@@ -613,16 +622,16 @@ footer{background:var(--text);color:rgba(255,255,255,.7);padding:3rem;display:fl
 <!-- FAQ -->
 <section class="faq">
   <div class="faq-inner">
-    <div class="section-label">Common questions</div>
-    <h2 class="section-heading">Got a question?</h2>
-    <p class="section-sub">Or just call me — 07356 287590.</p>
+    <div class="sec-label">Common questions</div>
+    <h2 class="sec-title">Got a question?</h2>
+    <p class="sec-sub" style="margin-bottom:0">Or just call me — 07356 287590.</p>
     <div class="faq-list">
-      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Why is my computer running so slowly? <span class="arr">▼</span></button><div class="faq-a">Usually caused by a nearly full hard drive, too many programmes starting up automatically, or an aging hard drive beginning to fail. In most cases a tune-up sorts it. Replacing an old hard drive with an SSD is one of the best upgrades — it can restore near-new speed for a very reasonable cost.</div></div>
-      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Is it worth repairing my laptop or should I buy a new one? <span class="arr">▼</span></button><div class="faq-a">If the repair costs less than 50% of a comparable new machine, repair is almost always better value. A slow or non-charging laptop often just needs an SSD or a new battery. I'll always give you an honest assessment before charging anything.</div></div>
-      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you offer a no fix, no fee guarantee? <span class="arr">▼</span></button><div class="faq-a">Yes — if I can't fix your problem, you don't pay. No diagnostic charge, no call-out fee for failed repairs.</div></div>
-      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you come to my home or do I need to drop off my device? <span class="arr">▼</span></button><div class="faq-a">I come to you. Home visits across Willenhall and the West Midlands, usually booked within 24–48 hours. Same-day available for urgent situations.</div></div>
-      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Can you recover deleted or lost files? <span class="arr">▼</span></button><div class="faq-a">In many cases, yes. Data recovery is possible for accidentally deleted files, failed hard drives, and systems that won't boot. I always attempt recovery before any repair that could overwrite data.</div></div>
-      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you need a contract for business IT support? <span class="arr">▼</span></button><div class="faq-a">No long-term contracts. Repairs are priced per job. For businesses wanting ongoing support, I offer flexible month-to-month arrangements with no lock-in.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Why is my computer running so slowly?<span class="arr">▼</span></button><div class="faq-a">Usually caused by a nearly full hard drive, too many startup programmes, or an aging drive. A tune-up often sorts it — replacing the hard drive with an SSD can make it feel brand new for a very reasonable cost.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Is it worth repairing or should I buy a new one?<span class="arr">▼</span></button><div class="faq-a">If the repair costs less than 50% of a comparable new machine, repair is almost always better value. Slow or non-charging laptops often just need an SSD or battery. I'll always give you an honest answer before charging anything.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you offer a no fix, no fee guarantee?<span class="arr">▼</span></button><div class="faq-a">Yes — if I can't fix your problem, you don't pay. No diagnostic charge, no call-out fee for failed repairs.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you come to my home?<span class="arr">▼</span></button><div class="faq-a">Yes — I come to you. Home visits across Willenhall and the West Midlands, usually booked within 24–48 hours. Same-day available for urgent situations.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Can you recover deleted or lost files?<span class="arr">▼</span></button><div class="faq-a">In many cases, yes. Data recovery is possible for accidentally deleted files, failed drives and systems that won't boot. I always attempt recovery before any repair that could overwrite data.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you need a contract for business support?<span class="arr">▼</span></button><div class="faq-a">No contracts. Repairs are priced per job. For ongoing business support I offer flexible month-to-month arrangements — no lock-in.</div></div>
     </div>
   </div>
 </section>
@@ -630,62 +639,52 @@ footer{background:var(--text);color:rgba(255,255,255,.7);padding:3rem;display:fl
 <!-- CONTACT -->
 <section class="contact" id="contact-section">
   <div class="contact-inner">
-    <div class="contact-left">
-      <div class="section-label">Get in touch</div>
-      <h2 class="section-heading">Call, Text, WhatsApp<br>or Fill in the Form</h2>
-      <p class="section-sub">The quickest way is to call or WhatsApp me directly — I reply fast. Based in Willenhall, serving the whole West Midlands.</p>
-      <div class="contact-ways">
-        <a href="tel:07356287590" class="cw-row">
-          <div class="cw-icon" style="background:#eff4ff">📞</div>
-          <div><div class="cw-lbl">Call me — quickest option</div><div class="cw-val">07356 287590</div></div>
-        </a>
-        <a href="sms:07356287590" class="cw-row">
-          <div class="cw-icon" style="background:#f0fdf7">💬</div>
-          <div><div class="cw-lbl">Text me</div><div class="cw-val">07356 287590</div></div>
-        </a>
-        <a href="https://wa.me/447356287590?text=Hi%20Abdul%2C%20I%20need%20some%20help%20with%20my%20computer." target="_blank" rel="noopener" class="cw-row">
-          <div class="cw-icon" style="background:#f0fdf7">💚</div>
-          <div><div class="cw-lbl">WhatsApp me</div><div class="cw-val" style="color:#059669">Message on WhatsApp</div></div>
-        </a>
-        <a href="mailto:abdulshikdarit@gmail.com" class="cw-row">
-          <div class="cw-icon" style="background:#fffbeb">📧</div>
-          <div><div class="cw-lbl">Email</div><div class="cw-val">abdulshikdarit@gmail.com</div></div>
-        </a>
-        <div class="cw-row" style="cursor:default">
-          <div class="cw-icon" style="background:#fef2f2">📍</div>
-          <div><div class="cw-lbl">Based in</div><div class="cw-val">Willenhall, West Midlands</div></div>
-        </div>
+    <div>
+      <div class="sec-label">Get in touch</div>
+      <h2 class="sec-title">Call, Text, WhatsApp<br>or Fill in the Form</h2>
+      <p class="sec-sub">Quickest is to call or WhatsApp — I reply fast. Based in Willenhall, serving all of the West Midlands.</p>
+      <div class="cways">
+        <a href="tel:07356287590" class="cw"><div class="cw-ic" style="background:#eff6ff">📞</div><div><div class="cw-lb">Call me — quickest option</div><div class="cw-vl">07356 287590</div></div></a>
+        <a href="sms:07356287590" class="cw"><div class="cw-ic" style="background:#f0fdf7">💬</div><div><div class="cw-lb">Text me</div><div class="cw-vl">07356 287590</div></div></a>
+        <a href="https://wa.me/447356287590" target="_blank" rel="noopener" class="cw"><div class="cw-ic" style="background:#f0fdf7">💚</div><div><div class="cw-lb">WhatsApp me</div><div class="cw-vl" style="color:#059669">Message on WhatsApp</div></div></a>
+        <a href="mailto:abdulshikdarit@gmail.com" class="cw"><div class="cw-ic" style="background:#fffbeb">📧</div><div><div class="cw-lb">Email</div><div class="cw-vl">abdulshikdarit@gmail.com</div></div></a>
+        <div class="cw" style="cursor:default"><div class="cw-ic" style="background:#fef2f2">📍</div><div><div class="cw-lb">Based in</div><div class="cw-vl">Willenhall, West Midlands</div></div></div>
       </div>
     </div>
     <div class="form-card">
       <h3>Send a message</h3>
-      <p>Fill in your details and I'll call or text you back — usually within a few hours.</p>
+      <p>I'll reply by call or text — usually within a few hours.</p>
       <div id="contact-form">
-        <div class="field"><label>Your Name</label><input type="text" id="f-name" placeholder="e.g. John Smith"></div>
-        <div class="field"><label>Phone Number</label><input type="tel" id="f-phone" placeholder="e.g. 07700 900000"></div>
-        <div class="field"><label>Email Address</label><input type="email" id="f-email" placeholder="you@example.com"></div>
-        <div class="field"><label>What do you need help with?</label>
-          <select id="f-type">
-            <option value="">— Select a service —</option>
-            <option>Slow computer / tune-up</option>
-            <option>Virus or malware removal</option>
-            <option>Screen replacement</option>
-            <option>Hardware repair (battery, keyboard etc.)</option>
-            <option>Wi-Fi / networking setup</option>
-            <option>Data recovery</option>
-            <option>Printer or peripheral setup</option>
-            <option>Business IT support</option>
-            <option>Microsoft 365 / email setup</option>
-            <option>Something else</option>
-          </select>
-        </div>
-        <div class="field"><label>Brief description</label><textarea id="f-message" placeholder="Tell me a bit about the problem..."></textarea></div>
-        <button class="submit-btn" onclick="submitForm()">Send Message →</button>
+        <form action="https://formspree.io/f/mwvjbzrg" method="POST" onsubmit="handleForm(event)">
+          <div class="field"><label>Your Name *</label><input type="text" name="name" placeholder="e.g. John Smith" required></div>
+          <div class="field"><label>Phone Number</label><input type="tel" name="phone" placeholder="e.g. 07700 900000"></div>
+          <div class="field"><label>Email Address</label><input type="email" name="email" placeholder="you@example.com"></div>
+          <div class="field"><label>What do you need help with?</label>
+            <select name="service">
+              <option value="">— Select a service —</option>
+              <option>Slow computer / tune-up</option>
+              <option>Virus or malware removal</option>
+              <option>Screen replacement</option>
+              <option>Hardware repair</option>
+              <option>Wi-Fi / networking setup</option>
+              <option>Data recovery</option>
+              <option>Business IT support</option>
+              <option>Teaching / digital skills</option>
+              <option>IT Consulting</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="field"><label>Brief description</label><textarea name="message" placeholder="Tell me a bit about the problem..."></textarea></div>
+          <input type="hidden" name="_subject" value="New enquiry from Abdul's Tech Solutions website">
+          <input type="hidden" name="_replyto" value="abdulshikdarit@gmail.com">
+          <button type="submit" class="sub-btn">Send Message →</button>
+          <p class="form-note">📧 Your message goes directly to Abdul's email inbox</p>
+        </form>
       </div>
       <div class="form-success" id="form-success">
         <div class="tick">✅</div>
         <h4>Message sent!</h4>
-        <p>Thanks — I'll get back to you shortly. For urgent help call or WhatsApp <strong>07356 287590</strong>.</p>
+        <p>Thanks — I'll get back to you shortly. For urgent help call <strong>07356 287590</strong>.</p>
       </div>
     </div>
   </div>
@@ -693,473 +692,166 @@ footer{background:var(--text);color:rgba(255,255,255,.7);padding:3rem;display:fl
 
 <!-- MAP -->
 <div class="map-section">
-  <iframe
-    src="https://maps.google.com/maps?q=Willenhall,+West+Midlands,+UK&t=&z=13&ie=UTF8&iwloc=&output=embed"
-    allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-    title="Abdul's Tech Solutions — Willenhall, West Midlands">
-  </iframe>
+  <iframe src="https://maps.google.com/maps?q=Willenhall,+West+Midlands,+UK&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Abdul's Tech Solutions — Willenhall"></iframe>
 </div>
 
 </div><!-- end page-main -->
 
-<!-- ══════════════════════════════ HOME REPAIR PAGE ══════════════════════════════ -->
+<!-- ════════ HOME REPAIR PAGE ════════ -->
 <div id="page-home-repair" class="page">
-  <div class="service-page-hero">
-    <div class="service-page-inner">
+  <div class="sp-hero">
+    <div class="sp-inner">
       <a href="#" class="back-btn" onclick="showPage('main')">← Back to Home</a>
-      <div class="page-badge home-badge">🏠 Home Computer Repair</div>
-      <h1 class="page-hero-title">Computer Repair<br>at Your Home</h1>
-      <p class="page-hero-sub">I come to you anywhere in Willenhall and the West Midlands. Fast, friendly repairs explained in plain English — no jargon, no surprise charges.</p>
-      <div class="page-ctas">
-        <a href="tel:07356287590" class="cta-main">📞 Call: 07356 287590</a>
-        <a href="https://wa.me/447356287590?text=Hi%20Abdul%2C%20I%20need%20help%20with%20a%20home%20computer%20repair." class="cta-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
-        <a href="#contact-section" class="cta-outline" onclick="showPage('main')">Send a Message</a>
+      <div class="sp-badge" style="background:#eff6ff;color:var(--accent);border:1px solid #bfdbfe">🏠 Home Computer Repair</div>
+      <h1 class="sp-title">Computer Repair<br>at Your Home</h1>
+      <p class="sp-sub">I come to you anywhere in Willenhall and the West Midlands. Fast, friendly repairs in plain English — no jargon, no surprise charges.</p>
+      <div class="sp-ctas">
+        <a href="tel:07356287590" class="cta-main">📞 07356 287590</a>
+        <a href="https://wa.me/447356287590?text=Hi%20Abdul%2C%20I%20need%20help%20with%20a%20home%20repair." class="cta-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
+        <a href="#contact-section" class="cta-sec" onclick="showPage('main')">Send a Message</a>
       </div>
     </div>
   </div>
-  <section class="service-detail">
+  <section class="sd">
     <div class="sd-inner">
-      <div class="section-label">What I fix</div>
-      <h2 class="section-heading">Home IT Services</h2>
+      <div class="sec-label">What I fix</div><h2 class="sec-title">Home IT Services</h2>
       <div class="sd-grid">
-        <div class="sd-card">
-          <span class="sd-card-icon">💻</span>
-          <div class="sd-card-title">Screen Replacement</div>
-          <p class="sd-card-desc">Cracked, flickering or completely black screen? I replace screens on most laptop brands — usually same week.</p>
-          <ul class="sd-card-list">
-            <li>Lenovo, HP, Dell, Acer, Asus</li>
-            <li>Fast turnaround</li>
-            <li>Quality parts used</li>
-          </ul>
-        </div>
-        <div class="sd-card">
-          <span class="sd-card-icon">🐛</span>
-          <div class="sd-card-title">Virus &amp; Malware Removal</div>
-          <p class="sd-card-desc">Is your computer acting strange, showing pop-ups or running very slowly? I'll clean it out properly and protect it going forward.</p>
-          <ul class="sd-card-list">
-            <li>Full malware scan and removal</li>
-            <li>Antivirus setup</li>
-            <li>Security hardening advice</li>
-          </ul>
-        </div>
-        <div class="sd-card">
-          <span class="sd-card-icon">⚡</span>
-          <div class="sd-card-title">Speed-Up &amp; Tune-Up</div>
-          <p class="sd-card-desc">A slow computer doesn't mean a new one. I'll find what's causing it and fix it — often an SSD upgrade makes it feel brand new.</p>
-          <ul class="sd-card-list">
-            <li>SSD upgrades</li>
-            <li>Startup programme cleanup</li>
-            <li>RAM upgrades if needed</li>
-          </ul>
-        </div>
-        <div class="sd-card">
-          <span class="sd-card-icon">📶</span>
-          <div class="sd-card-title">Wi-Fi &amp; Internet Setup</div>
-          <p class="sd-card-desc">Can't connect? Slow in certain rooms? Printer won't find the network? I'll sort it all out.</p>
-          <ul class="sd-card-list">
-            <li>Router setup and optimisation</li>
-            <li>Wi-Fi dead zone fixes</li>
-            <li>Printer and device setup</li>
-          </ul>
-        </div>
-        <div class="sd-card">
-          <span class="sd-card-icon">💾</span>
-          <div class="sd-card-title">Data Recovery &amp; Backup</div>
-          <p class="sd-card-desc">Lost files, deleted photos or a hard drive that's failed? I'll attempt to recover what I can and set up proper backups so it doesn't happen again.</p>
-          <ul class="sd-card-list">
-            <li>File and photo recovery</li>
-            <li>Failed hard drive recovery</li>
-            <li>Cloud and local backup setup</li>
-          </ul>
-        </div>
-        <div class="sd-card">
-          <span class="sd-card-icon">🖨️</span>
-          <div class="sd-card-title">Printer &amp; Peripheral Setup</div>
-          <p class="sd-card-desc">Getting printers, scanners, webcams and other devices talking to your computer can be a headache. I'll get it all connected and working.</p>
-          <ul class="sd-card-list">
-            <li>Wireless and USB printers</li>
-            <li>Scanners and webcams</li>
-            <li>Driver installation</li>
-          </ul>
-        </div>
-        <div class="sd-card">
-          <span class="sd-card-icon">🔋</span>
-          <div class="sd-card-title">Battery &amp; Charging Repairs</div>
-          <p class="sd-card-desc">Laptop won't charge or dies in an hour? A battery replacement is often a quick, affordable fix that gives your laptop years more life.</p>
-          <ul class="sd-card-list">
-            <li>Battery replacement</li>
-            <li>Charging port repair</li>
-            <li>Power adapter check</li>
-          </ul>
-        </div>
-        <div class="sd-card">
-          <span class="sd-card-icon">🪟</span>
-          <div class="sd-card-title">Windows Install &amp; Upgrades</div>
-          <p class="sd-card-desc">Fresh Windows install to clear out years of clutter, or help upgrading to Windows 11 — I'll make sure everything's set up cleanly.</p>
-          <ul class="sd-card-list">
-            <li>Clean Windows reinstall</li>
-            <li>Windows 10 / 11 upgrades</li>
-            <li>All drivers and software setup</li>
-          </ul>
-        </div>
+        <div class="sd-card"><span class="sd-card-icon">💻</span><div class="sd-card-title">Screen Replacement</div><p class="sd-card-desc">Cracked or black screen? I replace screens on most brands — usually same week.</p><ul class="sd-card-list"><li>Lenovo, HP, Dell, Acer, Asus</li><li>Fast turnaround</li><li>Quality parts</li></ul></div>
+        <div class="sd-card"><span class="sd-card-icon">🐛</span><div class="sd-card-title">Virus &amp; Malware Removal</div><p class="sd-card-desc">Pop-ups, slow machine, strange behaviour? I'll clean it out and protect it going forward.</p><ul class="sd-card-list"><li>Full scan and removal</li><li>Antivirus setup</li><li>Security hardening</li></ul></div>
+        <div class="sd-card"><span class="sd-card-icon">⚡</span><div class="sd-card-title">Speed-Up &amp; Tune-Up</div><p class="sd-card-desc">A slow computer doesn't mean a new one. SSD upgrades can make it feel brand new.</p><ul class="sd-card-list"><li>SSD upgrades</li><li>Startup cleanup</li><li>RAM upgrades if needed</li></ul></div>
+        <div class="sd-card"><span class="sd-card-icon">📶</span><div class="sd-card-title">Wi-Fi &amp; Internet Setup</div><p class="sd-card-desc">Can't connect? Dead zones? Printer won't find the network? I'll sort it all.</p><ul class="sd-card-list"><li>Router setup</li><li>Wi-Fi dead zone fix</li><li>Printer &amp; device setup</li></ul></div>
+        <div class="sd-card"><span class="sd-card-icon">💾</span><div class="sd-card-title">Data Recovery &amp; Backup</div><p class="sd-card-desc">Lost files or failed hard drive? I'll attempt recovery and set up proper backups.</p><ul class="sd-card-list"><li>File and photo recovery</li><li>Failed drive recovery</li><li>Cloud backup setup</li></ul></div>
+        <div class="sd-card"><span class="sd-card-icon">🔋</span><div class="sd-card-title">Battery &amp; Charging Repairs</div><p class="sd-card-desc">Won't charge or dies fast? A battery replacement gives your laptop years more life.</p><ul class="sd-card-list"><li>Battery replacement</li><li>Charging port repair</li><li>Power adapter check</li></ul></div>
+        <div class="sd-card"><span class="sd-card-icon">🖨️</span><div class="sd-card-title">Printer &amp; Peripheral Setup</div><p class="sd-card-desc">Getting printers, scanners and webcams talking to your computer — all sorted.</p><ul class="sd-card-list"><li>Wireless and USB printers</li><li>Scanners and webcams</li><li>Driver installation</li></ul></div>
+        <div class="sd-card"><span class="sd-card-icon">🪟</span><div class="sd-card-title">Windows Install &amp; Upgrades</div><p class="sd-card-desc">Fresh install to clear years of clutter, or a clean upgrade to Windows 11.</p><ul class="sd-card-list"><li>Clean reinstall</li><li>Windows 10 / 11 upgrades</li><li>All drivers set up</li></ul></div>
       </div>
-      <div class="pricing-note">
-        <div class="pricing-note-icon">💡</div>
-        <div class="pricing-note-text">
-          <h4>No fix, no fee — always</h4>
-          <p>I give you a clear quote before starting any work. If I can't fix it, you don't pay a penny. Most home repairs start from £40. Call me on <strong><a href="tel:07356287590" style="color:var(--accent-light)">07356 287590</a></strong> for a quick chat about your problem.</p>
-        </div>
-      </div>
+      <div class="pnote"><div class="pnote-icon">💡</div><div class="pnote-text"><h4>No fix, no fee — always</h4><p>Clear quote before I start. If I can't fix it, you don't pay. Most home repairs from £40. Call <strong><a href="tel:07356287590" style="color:var(--accent)">07356 287590</a></strong> for a quick chat.</p></div></div>
     </div>
   </section>
-  <div class="areas">
-    <div class="areas-inner">
-      <span class="areas-label">📍 I come to you in</span>
-      <div class="areas-tags">
-        <span class="area-tag">Willenhall</span><span class="area-tag">Walsall</span><span class="area-tag">Birmingham</span><span class="area-tag">Wolverhampton</span><span class="area-tag">West Bromwich</span><span class="area-tag">Dudley</span><span class="area-tag">Solihull</span><span class="area-tag">Sutton Coldfield</span><span class="area-tag">Darlaston</span><span class="area-tag">+ more</span>
-      </div>
+  <div class="sp-cta-bar" style="background:var(--accent)">
+    <h2>Ready to get your computer fixed?</h2>
+    <p>Most jobs booked within 24–48 hours across Willenhall and the West Midlands.</p>
+    <div class="sp-cta-bar-btns">
+      <a href="tel:07356287590" style="background:#fff;color:var(--accent)">📞 07356 287590</a>
+      <a href="https://wa.me/447356287590" target="_blank" rel="noopener" style="background:var(--wa);color:#fff">💬 WhatsApp</a>
     </div>
   </div>
-  <section style="padding:3rem;background:var(--accent-light);text-align:center">
-    <h2 style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.8rem;color:#fff;margin-bottom:.75rem">Ready to get your computer fixed?</h2>
-    <p style="color:rgba(255,255,255,.85);font-size:1rem;margin-bottom:1.5rem">Call, text or WhatsApp me — I reply fast and most jobs are booked within 24–48 hours.</p>
-    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
-      <a href="tel:07356287590" style="display:inline-flex;align-items:center;gap:.6rem;background:#fff;color:var(--accent-light);font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;padding:.9rem 2rem;border-radius:10px;text-decoration:none">📞 07356 287590</a>
-      <a href="https://wa.me/447356287590" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.6rem;background:var(--wa);color:#fff;font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;padding:.9rem 2rem;border-radius:10px;text-decoration:none">💬 WhatsApp</a>
-    </div>
-  </section>
-</div><!-- end page-home-repair -->
+</div>
 
-<!-- ══════════════════════════════ BUSINESS IT PAGE ══════════════════════════════ -->
+<!-- ════════ BUSINESS IT PAGE ════════ -->
 <div id="page-business" class="page">
-  <div class="service-page-hero">
-    <div class="service-page-inner">
+  <div class="sp-hero">
+    <div class="sp-inner">
       <a href="#" class="back-btn" onclick="showPage('main')">← Back to Home</a>
-      <div class="page-badge biz-badge">🏢 Small Business IT Support</div>
-      <h1 class="page-hero-title">IT Support for<br>Small Businesses</h1>
-      <p class="page-hero-sub">Keep your business running without the big agency costs. I handle your IT — networks, Microsoft 365, Intune, backups and more — so you can focus on what you do best.</p>
-      <div class="page-ctas">
-        <a href="tel:07356287590" class="cta-main">📞 Call: 07356 287590</a>
+      <div class="sp-badge" style="background:var(--yellow-bg);color:var(--yellow);border:1px solid #fde68a">🏢 Business IT Support</div>
+      <h1 class="sp-title">IT Support for<br>Small Businesses</h1>
+      <p class="sp-sub">Keep your business running without big agency costs. Networks, Microsoft 365, Intune, backups and more — flexible, no contracts.</p>
+      <div class="sp-ctas">
+        <a href="tel:07356287590" class="cta-main">📞 07356 287590</a>
         <a href="https://wa.me/447356287590?text=Hi%20Abdul%2C%20I%20need%20business%20IT%20support." class="cta-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
-        <a href="#contact-section" class="cta-outline" onclick="showPage('main')">Send a Message</a>
+        <a href="#contact-section" class="cta-sec" onclick="showPage('main')">Send a Message</a>
       </div>
     </div>
   </div>
-  <section class="service-detail">
+  <section class="sd">
     <div class="sd-inner">
-      <div class="section-label">What I offer</div>
-      <h2 class="section-heading">Business IT Services</h2>
+      <div class="sec-label">What I offer</div><h2 class="sec-title">Business IT Services</h2>
       <div class="sd-grid">
-        <div class="sd-card">
-          <span class="sd-card-icon">🌐</span>
-          <div class="sd-card-title">Network Setup &amp; Security</div>
-          <p class="sd-card-desc">Secure, reliable Wi-Fi and cabling for your office. I design and install networks that work properly and keep your data safe.</p>
-          <ul class="sd-card-list">
-            <li>Business Wi-Fi setup</li>
-            <li>Firewall configuration</li>
-            <li>VLAN and network segmentation</li>
-          </ul>
-        </div>
-        <div class="sd-card">
-          <span class="sd-card-icon">☁️</span>
-          <div class="sd-card-title">Microsoft 365 &amp; Email</div>
-          <p class="sd-card-desc">Set up and manage Microsoft 365 for your team — email, Teams, SharePoint and OneDrive — all configured properly from day one.</p>
-          <ul class="sd-card-list">
-            <li>365 setup and migration</li>
-            <li>Teams and SharePoint</li>
-            <li>Email domain configuration</li>
-          </ul>
-        </div>
-        <div class="sd-card">
-          <span class="sd-card-icon">📱</span>
-          <div class="sd-card-title">Microsoft Intune &amp; MDM</div>
-          <p class="sd-card-desc">Manage all your company devices from one place. Enrol laptops, phones and tablets, push policies and keep everything secure.</p>
-          <ul class="sd-card-list">
-            <li>Device enrolment and policy</li>
-            <li>App deployment</li>
-            <li>iOS and Windows management</li>
-          </ul>
-        </div>
-        <div class="sd-card">
-          <span class="sd-card-icon">🎧</span>
-          <div class="sd-card-title">Remote &amp; On-Site Support</div>
-          <p class="sd-card-desc">Something broken? I'm on hand for remote fixes via AnyDesk or Teams, and I come on-site across Willenhall and the West Midlands.</p>
-          <ul class="sd-card-list">
-            <li>Remote support via AnyDesk / Teams</li>
-            <li>On-site visits</li>
-            <li>Fast response times</li>
-          </ul>
-        </div>
-        <div class="sd-card">
-          <span class="sd-card-icon">🔒</span>
-          <div class="sd-card-title">Backup &amp; Data Protection</div>
-          <p class="sd-card-desc">Ransomware and hardware failures happen. I set up automated offsite backups so your data is always safe and recoverable.</p>
-          <ul class="sd-card-list">
-            <li>Automated cloud backups</li>
-            <li>Backup testing and verification</li>
-            <li>Disaster recovery planning</li>
-          </ul>
-        </div>
-        <div class="sd-card">
-          <span class="sd-card-icon">⚙️</span>
-          <div class="sd-card-title">PowerShell &amp; Automation</div>
-          <p class="sd-card-desc">Save time on repetitive IT tasks with custom PowerShell scripts for reporting, user management and system maintenance.</p>
-          <ul class="sd-card-list">
-            <li>Custom automation scripts</li>
-            <li>User account management</li>
-            <li>Scheduled reporting</li>
-          </ul>
-        </div>
-        <div class="sd-card">
-          <span class="sd-card-icon">🖥️</span>
-          <div class="sd-card-title">Server &amp; Workstation Support</div>
-          <p class="sd-card-desc">Windows Server setup, maintenance and troubleshooting. Keep your workstations updated and running reliably.</p>
-          <ul class="sd-card-list">
-            <li>Windows Server setup</li>
-            <li>Patch management</li>
-            <li>Hardware repair and upgrade</li>
-          </ul>
-        </div>
-        <div class="sd-card">
-          <span class="sd-card-icon">🛡️</span>
-          <div class="sd-card-title">Cybersecurity</div>
-          <p class="sd-card-desc">Protect your business from phishing, ransomware and data breaches with layered security that goes beyond basic antivirus.</p>
-          <ul class="sd-card-list">
-            <li>Endpoint protection</li>
-            <li>DNS filtering</li>
-            <li>Staff phishing awareness</li>
-          </ul>
-        </div>
+        <div class="sd-card"><span class="sd-card-icon">🌐</span><div class="sd-card-title">Network Setup &amp; Security</div><p class="sd-card-desc">Secure, reliable Wi-Fi and cabling for your office. Networks that work and stay safe.</p><ul class="sd-card-list"><li>Business Wi-Fi setup</li><li>Firewall configuration</li><li>VLAN segmentation</li></ul></div>
+        <div class="sd-card"><span class="sd-card-icon">☁️</span><div class="sd-card-title">Microsoft 365 &amp; Email</div><p class="sd-card-desc">Set up and manage 365 — email, Teams, SharePoint and OneDrive configured properly.</p><ul class="sd-card-list"><li>365 setup and migration</li><li>Teams and SharePoint</li><li>Email domain config</li></ul></div>
+        <div class="sd-card"><span class="sd-card-icon">📱</span><div class="sd-card-title">Microsoft Intune &amp; MDM</div><p class="sd-card-desc">Manage all company devices from one place — policies, apps, compliance.</p><ul class="sd-card-list"><li>Device enrolment</li><li>App deployment</li><li>iOS and Windows</li></ul></div>
+        <div class="sd-card"><span class="sd-card-icon">🎧</span><div class="sd-card-title">Remote &amp; On-Site Support</div><p class="sd-card-desc">Remote fixes via AnyDesk or Teams, and on-site visits across the West Midlands.</p><ul class="sd-card-list"><li>Remote support</li><li>On-site visits</li><li>Fast response</li></ul></div>
+        <div class="sd-card"><span class="sd-card-icon">🔒</span><div class="sd-card-title">Backup &amp; Data Protection</div><p class="sd-card-desc">Automated offsite backups so your data is always safe and recoverable.</p><ul class="sd-card-list"><li>Cloud backups</li><li>Backup testing</li><li>Disaster recovery</li></ul></div>
+        <div class="sd-card"><span class="sd-card-icon">⚙️</span><div class="sd-card-title">PowerShell &amp; Automation</div><p class="sd-card-desc">Save time on repetitive IT tasks with custom scripts for reporting and management.</p><ul class="sd-card-list"><li>Custom scripts</li><li>User management</li><li>Scheduled reporting</li></ul></div>
+        <div class="sd-card"><span class="sd-card-icon">🖥️</span><div class="sd-card-title">Server &amp; Workstation Support</div><p class="sd-card-desc">Windows Server setup, maintenance and workstation management.</p><ul class="sd-card-list"><li>Windows Server setup</li><li>Patch management</li><li>Hardware repair</li></ul></div>
+        <div class="sd-card"><span class="sd-card-icon">🛡️</span><div class="sd-card-title">Cybersecurity</div><p class="sd-card-desc">Protect your business from phishing, ransomware and data breaches.</p><ul class="sd-card-list"><li>Endpoint protection</li><li>DNS filtering</li><li>Staff awareness</li></ul></div>
       </div>
-      <div class="pricing-note" style="background:var(--yellow-bg);border-color:#fde68a">
-        <div class="pricing-note-icon">💼</div>
-        <div class="pricing-note-text">
-          <h4 style="color:var(--yellow)">No long-term contracts</h4>
-          <p>All work is priced per job or on a flexible monthly basis — no lock-in. Call me on <strong><a href="tel:07356287590" style="color:var(--yellow)">07356 287590</a></strong> for a free chat about your business needs.</p>
-        </div>
-      </div>
+      <div class="pnote" style="background:var(--yellow-bg);border-color:#fde68a"><div class="pnote-icon">💼</div><div class="pnote-text"><h4 style="color:var(--yellow)">No long-term contracts</h4><p>Priced per job or flexible monthly — no lock-in. Call <strong><a href="tel:07356287590" style="color:var(--yellow)">07356 287590</a></strong> for a free chat.</p></div></div>
     </div>
   </section>
-  <section style="padding:3rem;background:var(--text);text-align:center">
-    <h2 style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.8rem;color:#fff;margin-bottom:.75rem">Let's talk about your business IT</h2>
-    <p style="color:rgba(255,255,255,.75);font-size:1rem;margin-bottom:1.5rem">Call or WhatsApp me for a free, no-obligation chat.</p>
-    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
-      <a href="tel:07356287590" style="display:inline-flex;align-items:center;gap:.6rem;background:#fff;color:var(--text);font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;padding:.9rem 2rem;border-radius:10px;text-decoration:none">📞 07356 287590</a>
-      <a href="https://wa.me/447356287590" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.6rem;background:var(--wa);color:#fff;font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;padding:.9rem 2rem;border-radius:10px;text-decoration:none">💬 WhatsApp</a>
+  <div class="sp-cta-bar" style="background:var(--text)">
+    <h2>Let's talk about your business IT</h2>
+    <p>Free, no-obligation chat to understand your needs.</p>
+    <div class="sp-cta-bar-btns">
+      <a href="tel:07356287590" style="background:#fff;color:var(--text)">📞 07356 287590</a>
+      <a href="https://wa.me/447356287590" target="_blank" rel="noopener" style="background:var(--wa);color:#fff">💬 WhatsApp</a>
     </div>
-  </section>
-</div><!-- end page-business -->
+  </div>
+</div>
 
-<!-- ══════════════════════ TEACHING PAGE ══════════════════════ -->
+<!-- ════════ TEACHING PAGE ════════ -->
 <div id="page-teaching" class="page">
-  <div class="service-page-hero" style="background:linear-gradient(135deg,#f0fdf7 0%,#ecfdf5 100%)">
-    <div class="service-page-inner">
+  <div class="sp-hero" style="background:linear-gradient(135deg,#f0fdf7,#ecfdf5)">
+    <div class="sp-inner">
       <a href="#" class="back-btn" onclick="showPage('main')">← Back to Home</a>
-      <div class="page-badge" style="background:#dcfce7;color:#166534;border:1px solid #a7f3d0">👨‍🏫 Teaching &amp; Digital Skills</div>
-      <h1 class="page-hero-title">Learn Tech at <br>Your Own Pace</h1>
-      <p class="page-hero-sub">Patient, friendly one-to-one lessons at your home across Willenhall and the West Midlands. Whether you're 7 or 77, I'll help you feel confident and safe online — with zero jargon.</p>
-      <div class="page-ctas">
-        <a href="tel:07356287590" class="cta-main">📞 Call: 07356 287590</a>
+      <div class="sp-badge" style="background:#dcfce7;color:#166534;border:1px solid #a7f3d0">👨‍🏫 Teaching &amp; Digital Skills</div>
+      <h1 class="sp-title">Learn Tech at<br>Your Own Pace</h1>
+      <p class="sp-sub">Patient, friendly one-to-one lessons at your home. Whether you're 7 or 77 — I'll help you feel confident and safe with technology, with zero jargon.</p>
+      <div class="sp-ctas">
+        <a href="tel:07356287590" class="cta-main">📞 07356 287590</a>
         <a href="https://wa.me/447356287590?text=Hi%20Abdul%2C%20I'm%20interested%20in%20IT%20lessons." class="cta-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
-        <a href="#contact-section" class="cta-outline" onclick="showPage('main')">Send a Message</a>
       </div>
     </div>
   </div>
-
-  <!-- WHO IS IT FOR -->
-  <section style="padding:4rem 3rem;background:#fff">
-    <div style="max-width:1100px;margin:0 auto">
-      <div class="section-label">Who is this for?</div>
-      <h2 class="section-heading">Everyone deserves to feel confident with tech</h2>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:2rem">
-
-        <div style="background:#eff4ff;border:2px solid #bfdbfe;border-radius:18px;padding:2rem">
-          <div style="font-size:2.2rem;margin-bottom:1rem">👴👵</div>
-          <h3 style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.2rem;margin-bottom:.6rem;color:#0f1623">For Elderly People</h3>
-          <p style="font-size:.9rem;color:#5a6478;line-height:1.7;margin-bottom:1rem">Want to video call your family, shop online safely or just stop feeling confused by your phone or laptop? I'll sit with you, go at your pace, and never make you feel silly for asking.</p>
-          <ul style="list-style:none;display:flex;flex-direction:column;gap:.4rem">
-            <li style="font-size:.875rem;color:#0f1623;display:flex;gap:.5rem">✓ Video calls (FaceTime, WhatsApp, Zoom)</li>
-            <li style="font-size:.875rem;color:#0f1623;display:flex;gap:.5rem">✓ Online shopping safely</li>
-            <li style="font-size:.875rem;color:#0f1623;display:flex;gap:.5rem">✓ Email and photos</li>
-            <li style="font-size:.875rem;color:#0f1623;display:flex;gap:.5rem">✓ Spotting scams &amp; staying safe</li>
-            <li style="font-size:.875rem;color:#0f1623;display:flex;gap:.5rem">✓ Using smartphones &amp; tablets</li>
-            <li style="font-size:.875rem;color:#0f1623;display:flex;gap:.5rem">✓ NHS &amp; government websites</li>
-          </ul>
-        </div>
-
-        <div style="background:#f0fdf7;border:2px solid #a7f3d0;border-radius:18px;padding:2rem">
-          <div style="font-size:2.2rem;margin-bottom:1rem">👦👧</div>
-          <h3 style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.2rem;margin-bottom:.6rem;color:#0f1623">For Children &amp; Young People</h3>
-          <p style="font-size:.9rem;color:#5a6478;line-height:1.7;margin-bottom:1rem">Help your child learn to use computers confidently and safely — from homework help to understanding how the internet works and staying safe online.</p>
-          <ul style="list-style:none;display:flex;flex-direction:column;gap:.4rem">
-            <li style="font-size:.875rem;color:#0f1623;display:flex;gap:.5rem">✓ Computer basics &amp; typing skills</li>
-            <li style="font-size:.875rem;color:#0f1623;display:flex;gap:.5rem">✓ Internet safety &amp; privacy</li>
-            <li style="font-size:.875rem;color:#0f1623;display:flex;gap:.5rem">✓ Word, PowerPoint &amp; school tools</li>
-            <li style="font-size:.875rem;color:#0f1623;display:flex;gap:.5rem">✓ Avoiding online dangers</li>
-            <li style="font-size:.875rem;color:#0f1623;display:flex;gap:.5rem">✓ Coding &amp; tech interest sessions</li>
-            <li style="font-size:.875rem;color:#0f1623;display:flex;gap:.5rem">✓ Parental controls setup</li>
-          </ul>
-        </div>
-
-        <div style="background:#fdf4ff;border:2px solid #e9d5ff;border-radius:18px;padding:2rem">
-          <div style="font-size:2.2rem;margin-bottom:1rem">🙋</div>
-          <h3 style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.2rem;margin-bottom:.6rem;color:#0f1623">For Anyone Who Wants to Learn</h3>
-          <p style="font-size:.9rem;color:#5a6478;line-height:1.7;margin-bottom:1rem">Changed jobs and need to learn new software? Want to understand your new laptop? Never too late — I'll help you get there without the stress.</p>
-          <ul style="list-style:none;display:flex;flex-direction:column;gap:.4rem">
-            <li style="font-size:.875rem;color:#0f1623;display:flex;gap:.5rem">✓ Microsoft Office basics</li>
-            <li style="font-size:.875rem;color:#0f1623;display:flex;gap:.5rem">✓ Google Workspace / Drive</li>
-            <li style="font-size:.875rem;color:#0f1623;display:flex;gap:.5rem">✓ Setting up a new device</li>
-            <li style="font-size:.875rem;color:#0f1623;display:flex;gap:.5rem">✓ Password safety &amp; accounts</li>
-            <li style="font-size:.875rem;color:#0f1623;display:flex;gap:.5rem">✓ One-off or regular sessions</li>
-            <li style="font-size:.875rem;color:#0f1623;display:flex;gap:.5rem">✓ At home, your pace</li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW LESSONS WORK -->
-  <section style="padding:4rem 3rem;background:var(--surface)">
-    <div style="max-width:900px;margin:0 auto">
-      <div class="section-label">How it works</div>
-      <h2 class="section-heading">Simple, relaxed lessons at your home</h2>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;margin-top:2rem">
-        <div style="background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:1.5rem;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,.06)">
-          <div style="width:48px;height:48px;border-radius:50%;background:#eff4ff;border:2px solid #bfdbfe;color:#2563eb;font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem">1</div>
-          <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:.95rem;margin-bottom:.4rem">Tell me what you want to learn</div>
-          <div style="font-size:.85rem;color:#5a6478">Call, text or WhatsApp — I'll ask a few questions to understand your level and goals.</div>
-        </div>
-        <div style="background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:1.5rem;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,.06)">
-          <div style="width:48px;height:48px;border-radius:50%;background:#eff4ff;border:2px solid #bfdbfe;color:#2563eb;font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem">2</div>
-          <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:.95rem;margin-bottom:.4rem">I come to your home</div>
-          <div style="font-size:.85rem;color:#5a6478">I bring everything needed. Lessons happen at your kitchen table, in your living room — wherever you're comfortable.</div>
-        </div>
-        <div style="background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:1.5rem;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,.06)">
-          <div style="width:48px;height:48px;border-radius:50%;background:#eff4ff;border:2px solid #bfdbfe;color:#2563eb;font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem">3</div>
-          <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:.95rem;margin-bottom:.4rem">Learn at your own pace</div>
-          <div style="font-size:.85rem;color:#5a6478">No rush, no silly questions. I explain everything simply and clearly — we go as fast or as slow as you need.</div>
-        </div>
-        <div style="background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:1.5rem;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,.06)">
-          <div style="width:48px;height:48px;border-radius:50%;background:#eff4ff;border:2px solid #bfdbfe;color:#2563eb;font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem">4</div>
-          <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:.95rem;margin-bottom:.4rem">Practice notes &amp; follow-up</div>
-          <div style="font-size:.85rem;color:#5a6478">I leave simple written notes so you can practise after. And you can text me if you get stuck between sessions.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section style="padding:3rem;background:#059669;text-align:center">
-    <h2 style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.8rem;color:#fff;margin-bottom:.75rem">Ready to get started?</h2>
-    <p style="color:rgba(255,255,255,.85);font-size:1rem;margin-bottom:1.5rem">Perfect for elderly relatives, children or anyone wanting to build their confidence with tech. Call me for a friendly chat.</p>
-    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
-      <a href="tel:07356287590" style="display:inline-flex;align-items:center;gap:.6rem;background:#fff;color:#059669;font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;padding:.9rem 2rem;border-radius:10px;text-decoration:none">📞 07356 287590</a>
-      <a href="https://wa.me/447356287590" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.6rem;background:rgba(255,255,255,.15);border:2px solid rgba(255,255,255,.5);color:#fff;font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;padding:.9rem 2rem;border-radius:10px;text-decoration:none">💬 WhatsApp Me</a>
-    </div>
-  </section>
-</div>
-
-<!-- ══════════════════════ CONSULTING PAGE ══════════════════════ -->
-<div id="page-consulting" class="page">
-  <div class="service-page-hero" style="background:linear-gradient(135deg,#fdf4ff 0%,#f5f3ff 100%)">
-    <div class="service-page-inner">
-      <a href="#" class="back-btn" onclick="showPage('main')">← Back to Home</a>
-      <div class="page-badge" style="background:#f3e8ff;color:#6b21a8;border:1px solid #e9d5ff">💡 IT Consulting</div>
-      <h1 class="page-hero-title">Honest IT Advice<br>You Can Trust</h1>
-      <p class="page-hero-sub">Not sure what technology you need? Want a second opinion before spending money? I give clear, unbiased advice with no sales agenda — just straight talking from someone who knows their stuff.</p>
-      <div class="page-ctas">
-        <a href="tel:07356287590" class="cta-main">📞 Call: 07356 287590</a>
-        <a href="https://wa.me/447356287590?text=Hi%20Abdul%2C%20I%20need%20some%20IT%20consulting%20advice." class="cta-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
-        <a href="#contact-section" class="cta-outline" onclick="showPage('main')">Send a Message</a>
-      </div>
-    </div>
-  </div>
-
-  <section class="service-detail">
+  <section class="sd">
     <div class="sd-inner">
-      <div class="section-label">What I offer</div>
-      <h2 class="section-heading">Consulting Services</h2>
-      <div class="sd-grid">
-        <div class="sd-card">
-          <span class="sd-card-icon">🛒</span>
-          <div class="sd-card-title">Tech Buying Advice</div>
-          <p class="sd-card-desc">Thinking of buying a new laptop, phone, printer or piece of software? I'll tell you exactly what to get for your budget — and what to avoid.</p>
-          <ul class="sd-card-list">
-            <li>Laptops, PCs &amp; tablets</li>
-            <li>Phones &amp; accessories</li>
-            <li>Software &amp; subscriptions</li>
-          </ul>
-        </div>
-        <div class="sd-card">
-          <span class="sd-card-icon">🗺️</span>
-          <div class="sd-card-title">IT Strategy for Small Businesses</div>
-          <p class="sd-card-desc">Planning to grow your business? I'll help you build a simple, affordable IT setup that scales with you — without overcomplicating things.</p>
-          <ul class="sd-card-list">
-            <li>Cloud vs on-site advice</li>
-            <li>Software stack recommendations</li>
-            <li>Cost-saving opportunities</li>
-          </ul>
-        </div>
-        <div class="sd-card">
-          <span class="sd-card-icon">🔍</span>
-          <div class="sd-card-title">Security Audits</div>
-          <p class="sd-card-desc">Is your home or business actually secure? I'll review your setup and give you a clear, honest report on any gaps — with practical steps to fix them.</p>
-          <ul class="sd-card-list">
-            <li>Password &amp; account review</li>
-            <li>Network security check</li>
-            <li>Backup verification</li>
-          </ul>
-        </div>
-        <div class="sd-card">
-          <span class="sd-card-icon">🚀</span>
-          <div class="sd-card-title">New Tech Project Planning</div>
-          <p class="sd-card-desc">Starting a new business, setting up an office, or moving to the cloud? I'll plan it properly from the start so you don't waste money fixing mistakes later.</p>
-          <ul class="sd-card-list">
-            <li>New office setup planning</li>
-            <li>Cloud migration advice</li>
-            <li>Tech onboarding for new staff</li>
-          </ul>
-        </div>
-        <div class="sd-card">
-          <span class="sd-card-icon">🧾</span>
-          <div class="sd-card-title">Second Opinion on IT Quotes</div>
-          <p class="sd-card-desc">Been given a quote from another IT company and not sure if it's fair? I'll review it and give you my honest take — no charge for a quick chat.</p>
-          <ul class="sd-card-list">
-            <li>Quote reviews</li>
-            <li>Scope of work checks</li>
-            <li>Value for money assessment</li>
-          </ul>
-        </div>
-        <div class="sd-card">
-          <span class="sd-card-icon">📋</span>
-          <div class="sd-card-title">IT Health Check</div>
-          <p class="sd-card-desc">A full review of your current IT setup — hardware, software, security, backups and internet. You get a clear written report with my recommendations.</p>
-          <ul class="sd-card-list">
-            <li>Full system review</li>
-            <li>Written findings report</li>
-            <li>Prioritised action plan</li>
-          </ul>
-        </div>
-      </div>
-      <div class="pricing-note" style="background:#fdf4ff;border-color:#e9d5ff">
-        <div class="pricing-note-icon">💡</div>
-        <div class="pricing-note-text">
-          <h4 style="color:#7c3aed">Free initial chat — always</h4>
-          <p>I'll always have a quick phone or WhatsApp conversation at no charge to understand what you need. Consulting sessions are then charged fairly by the hour. Call me on <strong><a href="tel:07356287590" style="color:#7c3aed">07356 287590</a></strong> to get started.</p>
-        </div>
+      <div class="sec-label">Who is this for?</div><h2 class="sec-title">Everyone deserves to feel confident with tech</h2>
+      <div class="sd-grid" style="margin-top:2rem">
+        <div class="sd-card" style="border-color:#bfdbfe;background:#eff6ff"><span class="sd-card-icon">👴👵</span><div class="sd-card-title">For Elderly People</div><p class="sd-card-desc">Video calls, online shopping, emails and phones — explained simply, at your pace, at your kitchen table.</p><ul class="sd-card-list"><li>Video calls (WhatsApp, Zoom, FaceTime)</li><li>Online shopping safely</li><li>Email and photos</li><li>Spotting scams online</li><li>Smartphones &amp; tablets</li><li>NHS &amp; government websites</li></ul></div>
+        <div class="sd-card" style="border-color:#a7f3d0;background:#f0fdf7"><span class="sd-card-icon">👦👧</span><div class="sd-card-title">For Children &amp; Young People</div><p class="sd-card-desc">Learn to use computers confidently and safely — from homework help to internet safety.</p><ul class="sd-card-list"><li>Computer basics &amp; typing</li><li>Internet safety &amp; privacy</li><li>Word, PowerPoint &amp; school tools</li><li>Avoiding online dangers</li><li>Coding intro sessions</li><li>Parental controls setup</li></ul></div>
+        <div class="sd-card" style="border-color:#e9d5ff;background:#fdf4ff"><span class="sd-card-icon">🙋</span><div class="sd-card-title">For Anyone Who Wants to Learn</div><p class="sd-card-desc">New laptop? Changed jobs? Need to learn new software? Never too late — I'll get you there.</p><ul class="sd-card-list"><li>Microsoft Office basics</li><li>Google Workspace / Drive</li><li>Setting up a new device</li><li>Password safety</li><li>One-off or regular sessions</li><li>At your home, your pace</li></ul></div>
       </div>
     </div>
   </section>
-
-  <section style="padding:3rem;background:#7c3aed;text-align:center">
-    <h2 style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.8rem;color:#fff;margin-bottom:.75rem">Not sure where to start?</h2>
-    <p style="color:rgba(255,255,255,.85);font-size:1rem;margin-bottom:1.5rem">Just give me a call or WhatsApp — the first chat is always free and I'm happy to point you in the right direction.</p>
-    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
-      <a href="tel:07356287590" style="display:inline-flex;align-items:center;gap:.6rem;background:#fff;color:#7c3aed;font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;padding:.9rem 2rem;border-radius:10px;text-decoration:none">📞 07356 287590</a>
-      <a href="https://wa.me/447356287590" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.6rem;background:rgba(255,255,255,.15);border:2px solid rgba(255,255,255,.4);color:#fff;font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;padding:.9rem 2rem;border-radius:10px;text-decoration:none">💬 WhatsApp Me</a>
+  <div class="sp-cta-bar" style="background:#059669">
+    <h2>Ready to get started?</h2>
+    <p>Perfect for elderly relatives, children or anyone wanting more confidence with tech.</p>
+    <div class="sp-cta-bar-btns">
+      <a href="tel:07356287590" style="background:#fff;color:#059669">📞 07356 287590</a>
+      <a href="https://wa.me/447356287590" target="_blank" rel="noopener" style="background:rgba(255,255,255,.15);border:2px solid rgba(255,255,255,.4);color:#fff">💬 WhatsApp Me</a>
     </div>
-  </section>
+  </div>
 </div>
+
+<!-- ════════ CONSULTING PAGE ════════ -->
+<div id="page-consulting" class="page">
+  <div class="sp-hero" style="background:linear-gradient(135deg,#fdf4ff,#f5f3ff)">
+    <div class="sp-inner">
+      <a href="#" class="back-btn" onclick="showPage('main')">← Back to Home</a>
+      <div class="sp-badge" style="background:#f3e8ff;color:#6b21a8;border:1px solid #e9d5ff">💡 IT Consulting</div>
+      <h1 class="sp-title">Honest IT Advice<br>You Can Trust</h1>
+      <p class="sp-sub">Not sure what tech you need? Want a second opinion? Clear, unbiased advice with no sales agenda — first chat always free.</p>
+      <div class="sp-ctas">
+        <a href="tel:07356287590" class="cta-main">📞 07356 287590</a>
+        <a href="https://wa.me/447356287590?text=Hi%20Abdul%2C%20I%20need%20some%20IT%20consulting%20advice." class="cta-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
+      </div>
+    </div>
+  </div>
+  <section class="sd">
+    <div class="sd-inner">
+      <div class="sec-label">What I offer</div><h2 class="sec-title">Consulting Services</h2>
+      <div class="sd-grid">
+        <div class="sd-card"><span class="sd-card-icon">🛒</span><div class="sd-card-title">Tech Buying Advice</div><p class="sd-card-desc">Thinking of buying a laptop, phone or software? I'll tell you exactly what to get — and what to avoid.</p><ul class="sd-card-list"><li>Laptops, PCs &amp; tablets</li><li>Phones &amp; accessories</li><li>Software recommendations</li></ul></div>
+        <div class="sd-card"><span class="sd-card-icon">🗺️</span><div class="sd-card-title">IT Strategy for Small Business</div><p class="sd-card-desc">Build a simple, affordable IT setup that scales with your business — without overcomplicating things.</p><ul class="sd-card-list"><li>Cloud vs on-site advice</li><li>Software stack guidance</li><li>Cost-saving opportunities</li></ul></div>
+        <div class="sd-card"><span class="sd-card-icon">🔍</span><div class="sd-card-title">Security Audits</div><p class="sd-card-desc">Is your home or business actually secure? Honest report on gaps — with practical steps to fix them.</p><ul class="sd-card-list"><li>Password &amp; account review</li><li>Network security check</li><li>Backup verification</li></ul></div>
+        <div class="sd-card"><span class="sd-card-icon">🚀</span><div class="sd-card-title">New Tech Project Planning</div><p class="sd-card-desc">Setting up an office or moving to cloud? Plan it properly from the start to avoid costly mistakes.</p><ul class="sd-card-list"><li>Office setup planning</li><li>Cloud migration advice</li><li>Tech onboarding</li></ul></div>
+        <div class="sd-card"><span class="sd-card-icon">🧾</span><div class="sd-card-title">Second Opinion on IT Quotes</div><p class="sd-card-desc">Been quoted by another IT company? I'll review it honestly — no charge for a quick chat.</p><ul class="sd-card-list"><li>Quote reviews</li><li>Scope of work checks</li><li>Value for money check</li></ul></div>
+        <div class="sd-card"><span class="sd-card-icon">📋</span><div class="sd-card-title">IT Health Check</div><p class="sd-card-desc">Full review of your IT — hardware, software, security, backups. Written report with recommendations.</p><ul class="sd-card-list"><li>Full system review</li><li>Written findings</li><li>Prioritised action plan</li></ul></div>
+      </div>
+      <div class="pnote" style="background:#fdf4ff;border-color:#e9d5ff"><div class="pnote-icon">💡</div><div class="pnote-text"><h4 style="color:#7c3aed">Free initial chat — always</h4><p>Quick call or WhatsApp at no charge to understand your needs. Consulting sessions charged fairly by the hour. Call <strong><a href="tel:07356287590" style="color:#7c3aed">07356 287590</a></strong>.</p></div></div>
+    </div>
+  </section>
+  <div class="sp-cta-bar" style="background:#7c3aed">
+    <h2>Not sure where to start?</h2>
+    <p>The first chat is always free. Call or WhatsApp me now.</p>
+    <div class="sp-cta-bar-btns">
+      <a href="tel:07356287590" style="background:#fff;color:#7c3aed">📞 07356 287590</a>
+      <a href="https://wa.me/447356287590" target="_blank" rel="noopener" style="background:rgba(255,255,255,.15);border:2px solid rgba(255,255,255,.4);color:#fff">💬 WhatsApp Me</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
 <footer>
   <div class="footer-brand">Abdul's <span>Tech Solutions</span></div>
   <div class="footer-links">
@@ -1175,37 +867,82 @@ footer{background:var(--text);color:rgba(255,255,255,.7);padding:3rem;display:fl
 </footer>
 
 <script>
-function showPage(id) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.getElementById('page-' + id).classList.add('active');
+// HERO SLIDESHOW
+let hIdx=0;
+const hTotal=4;
+function heroSlide(dir){
+  hIdx=(hIdx+dir+hTotal)%hTotal;
+  const track=document.getElementById('hero-slides');
+  track.style.transform=`translateX(-${hIdx*100}%)`;
+  document.querySelectorAll('#hero-dots div').forEach((d,i)=>{
+    d.style.background=i===hIdx?'var(--accent)':'var(--border2)';
+  });
+}
+setInterval(()=>heroSlide(1),4500);
+
+// PAGE SWITCHING
+function showPage(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page-'+id).classList.add('active');
   window.scrollTo({top:0,behavior:'smooth'});
 }
-function toggleMenu() {
-  document.getElementById('mobile-menu').classList.toggle('open');
-}
-function closeMenu() {
-  document.getElementById('mobile-menu').classList.remove('open');
-}
-function toggleFaq(btn) {
-  const ans = btn.nextElementSibling;
-  const isOpen = ans.classList.contains('open');
+
+// MOBILE MENU
+function toggleMenu(){document.getElementById('mob-menu').classList.toggle('open')}
+function closeMenu(){document.getElementById('mob-menu').classList.remove('open')}
+
+// FAQ
+function toggleFaq(btn){
+  const ans=btn.nextElementSibling;
+  const open=ans.classList.contains('open');
   document.querySelectorAll('.faq-a.open').forEach(a=>a.classList.remove('open'));
   document.querySelectorAll('.faq-q.open').forEach(q=>q.classList.remove('open'));
-  if(!isOpen){ans.classList.add('open');btn.classList.add('open')}
+  if(!open){ans.classList.add('open');btn.classList.add('open')}
 }
-function submitForm() {
-  const name = document.getElementById('f-name').value.trim();
-  const phone = document.getElementById('f-phone').value.trim();
-  const email = document.getElementById('f-email').value.trim();
-  const type = document.getElementById('f-type').value;
-  const msg = document.getElementById('f-message').value.trim();
-  if(!name){alert('Please enter your name.');return}
-  if(!phone && !email){alert('Please enter a phone number or email so I can get back to you.');return}
-  const subject = encodeURIComponent("Website Enquiry: "+(type||"IT Support"));
-  const body = encodeURIComponent("Name: "+name+"\nPhone: "+(phone||"Not provided")+"\nEmail: "+(email||"Not provided")+"\nService: "+(type||"Not specified")+"\n\nMessage:\n"+(msg||"No details provided."));
-  window.location.href = "mailto:abdulshikdarit@gmail.com?subject="+subject+"&body="+body;
-  document.getElementById('contact-form').style.display='none';
-  document.getElementById('form-success').style.display='block';
+
+// SERVICE SLIDER
+let slideIndex=0;
+const VISIBLE=3;
+function slideNav(dir){
+  const track=document.getElementById('slider-track');
+  const slides=track.querySelectorAll('.slide');
+  const max=slides.length-VISIBLE;
+  slideIndex=Math.max(0,Math.min(slideIndex+dir,max));
+  const w=slides[0].offsetWidth+16;
+  track.scrollLeft=slideIndex*w;
+  document.querySelectorAll('.sdot').forEach((d,i)=>d.classList.toggle('active',i===slideIndex));
+}
+// Auto-slide every 4s
+setInterval(()=>{
+  const track=document.getElementById('slider-track');
+  if(!track)return;
+  const slides=track.querySelectorAll('.slide');
+  const max=slides.length-VISIBLE;
+  slideIndex=(slideIndex>=max)?0:slideIndex+1;
+  const w=slides[0].offsetWidth+16;
+  track.scrollLeft=slideIndex*w;
+  document.querySelectorAll('.sdot').forEach((d,i)=>d.classList.toggle('active',i===slideIndex));
+},4000);
+
+// CONTACT FORM — uses Formspree
+function handleForm(e){
+  e.preventDefault();
+  const form=e.target;
+  const data=new FormData(form);
+  fetch('https://formspree.io/f/mwvjbzrg',{
+    method:'POST',
+    body:data,
+    headers:{'Accept':'application/json'}
+  }).then(r=>{
+    if(r.ok){
+      document.getElementById('contact-form').style.display='none';
+      document.getElementById('form-success').style.display='block';
+    } else {
+      alert('Something went wrong — please call or WhatsApp me on 07356 287590');
+    }
+  }).catch(()=>{
+    alert('Something went wrong — please call or WhatsApp me on 07356 287590');
+  });
 }
 </script>
 </body>
